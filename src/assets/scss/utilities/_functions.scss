@@ -1,0 +1,3 @@
+@function compute-control-max-width($min-width, $max-width, $factor) {
+  @return $min-width + (($max-width - $min-width) * $factor);
+}

@@ -1,0 +1,15 @@
+$small-control-width-factor: 0 !default;
+$medium-control-width-factor: 0.5 !default;
+$large-control-width-factor: 1.5 !default;
+
+@mixin control-width-adjustments($min-width, $max-width) {
+    &.has-width-small {
+        max-width: compute-control-max-width($min-width, $max-width, $small-control-width-factor);
+    }
+    &.has-width-medium {
+        max-width: compute-control-max-width($min-width, $max-width, $medium-control-width-factor);
+    }
+    &.has-width-large {
+        max-width: compute-control-max-width($min-width, $max-width, $large-control-width-factor);
+    }
+}

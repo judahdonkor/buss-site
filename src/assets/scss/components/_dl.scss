@@ -1,0 +1,36 @@
+dl {
+    display: flex;
+    flex-flow: row wrap;
+    dt {
+      flex-basis: 20%;
+      text-align: right;
+      padding: 0.5em 0.75em;
+      font-weight: $weight-semibold;
+      &:nth-of-type(even) {
+        background-color: $white-bis;
+      }
+      ~dt {
+        border-top: 1px solid $border-light;
+      }
+    }
+    dd {
+      flex-basis: 70%;
+      flex-grow: 1;
+      padding: 0.5em 0.75em;
+      // border-bottom: 1px solid $border-light;
+      &:nth-of-type(even) {
+        background-color: $white-bis;
+      }
+      ~dd {
+        border-top: 1px solid $border-light;
+      }
+    }
+    &.jd-has-background-bis {
+      dt:nth-of-type(even) {
+          background-color: $white-ter;
+        }
+      dd:nth-of-type(even) {
+          background-color: $white-ter;
+        }
+      }
+  }

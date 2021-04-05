@@ -1,0 +1,105 @@
+@import "~bulma/sass/utilities/derived-variables";
+@import "~bulma/sass/utilities/mixins";
+
+/* Helpers */
+.has-light-border {
+  border: $light-border;
+}
+
+.has-light-border-bottom {
+  border-bottom: $light-border;
+}
+
+.has-default-padding {
+  padding: $default-padding;
+}
+
+.has-small-padding {
+  padding: $small-padding;
+}
+
+.has-default-padding-top {
+  padding-top: $default-padding;
+}
+
+@include mobile {
+  .is-flex-direction-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/* Sidebar */
+$sidebar-box-shadow: none;
+
+/* NavBar: Bulma override */
+$navbar-background-color: $white;
+$navbar-item-color: $link;
+$navbar-item-hover-background-color: transparent;
+$navbar-item-active-color: $black-ter;
+$navbar-item-active-background-color: transparent;
+$navbar-dropdown-item-active-color: $grey-darker;
+$navbar-dropdown-item-hover-background-color: transparent;
+$navbar-dropdown-item-active-background-color: transparent;
+
+/* NavBar: specifics */
+$navbar-input-color: $grey-darker;
+$navbar-input-placeholder-color: $grey-lighter;
+$navbar-box-shadow: 0 1px $white-quater;
+$navbar-divider-border: 1px solid $white-quater;
+$navbar-item-h-padding: $default-padding * 0.75;
+$navbar-avatar-size: 1.75rem;
+
+/* Aside: Bulma override */
+$menu-item-radius: 0;
+$menu-list-link-padding: $size-base * 0.5 0;
+$menu-label-color: lighten($grey-darker, 25%);
+$menu-item-color: $link;
+$menu-item-hover-color: $black;
+$menu-item-hover-background-color: transparent;
+$menu-item-active-color: $black-ter;
+$menu-item-active-background-color: transparent;
+
+/* Card: Bulma override */
+$card-shadow: none;
+$card-header-shadow: none;
+$card-background-color: transparent;
+
+/* Card: specifics */
+$card-border: 1px solid $white-quater;
+$card-header-border-bottom-color: $white-quater;
+
+/* Table: Bulma override */
+$table-cell-border: 1px solid $white-bis;
+
+/* Form */
+$checkbox-border: 1px solid $grey-darker;
+
+/* Overlay: specifics */
+$overlay-background-color: rgba($white, 0.85);
+
+/* Modal card: Bulma override */
+$modal-z: 60;
+$modal-background-background-color: $overlay-background-color;
+// $modal-card-head-background-color: $white;
+// $modal-card-title-size: $size-base;
+$modal-card-body-padding: $default-padding 20px;
+// $modal-card-head-border-bottom: 1px solid $white-quater;
+
+/* Notification: Bulma override */
+$notification-background-color: $white;
+$notification-padding: $default-padding * 0.75 $default-padding;
+
+/* Footer: Bulma override */
+// $footer-background-color: transparent;
+// $footer-padding: $default-padding * 0.33 $default-padding;
+// $card-footer-border-top: 1px solid $white-quater;
+
+/* Footer: specifics */
+// $footer-logo-height: $size-base * 2;
+
+/* Progress: Bulma override */
+$progress-bar-background-color: transparent;
+
+/* Slider: Buefy override */
+$slider-track-background: transparent;

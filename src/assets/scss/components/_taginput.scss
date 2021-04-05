@@ -1,0 +1,8 @@
+$taginput-min-width: 10em !default;
+$taginput-max-width: 17em !default;
+
+.taginput.control {
+    max-width: $taginput-max-width;
+    min-width: $taginput-min-width;
+    @include control-width-adjustments($taginput-min-width, $taginput-max-width);
+}

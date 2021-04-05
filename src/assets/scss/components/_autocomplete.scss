@@ -1,0 +1,9 @@
+$autocomplete-min-width: 10rem !default;
+$autocomplete-max-width: 16.5rem !default;
+
+.autocomplete {
+    max-width: $autocomplete-max-width;
+    min-width: $autocomplete-min-width;
+
+    @include control-width-adjustments($autocomplete-min-width, $autocomplete-max-width);
+}

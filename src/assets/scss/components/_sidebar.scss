@@ -1,0 +1,37 @@
+.b-sidebar {
+    .sidebar-content {
+        background-color: $scheme-main-bis;
+        box-shadow: none;
+        padding: 3rem $block-spacing;
+        @media screen and (min-width: $sidebar-mobile-breakpoint - 1px) {
+            &.is-mini {
+                &:not(.is-mini-expand),
+                &.is-mini-expand:not(:hover) {
+                    .menu-list {
+                        li {
+                            a {
+                                span:nth-child(2) {
+                                    display: none;
+                                }
+                            }
+                            ul {
+                                padding-left: 0;
+                                li {
+                                    a {
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .menu-label:not(:last-child) {
+                        margin-bottom: 0;
+                        text-overflow: clip;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}

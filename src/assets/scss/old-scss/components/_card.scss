@@ -1,0 +1,29 @@
+.card:not(:last-child) {
+  margin-bottom: $default-padding;
+}
+
+.card {
+  border-radius: $radius-large;
+  border: $card-border;
+
+  &.has-table {
+    .card-content {
+      padding: 0;
+    }
+    .b-table {
+      border-radius: $radius-large;
+      overflow: hidden;
+    }
+  }
+
+  .card-header {
+    border-bottom: 1px solid $white-quater;
+  }
+
+  .card-content {
+    hr {
+      margin-left: $card-content-padding * -1;
+      margin-right: $card-content-padding * -1;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+/* Theme style (colors & sizes) */
+@import "utils/all";
+
+/* Core Libs & Lib configs */
+@import "libs";
+
+/* Layout */
+@import "layout/all";
+
+/* Components */
+@import "components/all";
+
+/* Helpers */
+
+@import "helpers";
+
+/* Animate.css custom build (just selected animations to minimize bundle size) */
+// @import "../css/animate.min.css";

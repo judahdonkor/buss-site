@@ -1,0 +1,21 @@
+.jd-form {
+    > .modal-card-head {
+        background-color: $scheme-main;
+        padding: $block-spacing 0;
+    }
+    > .modal-card-body {
+        padding: 0;
+    }
+    &.jd-sectioned {
+        > .modal-card-head {
+            @include until($desktop) {
+                padding-bottom: 0;
+            }
+        }
+        > .modal-card-body {
+            > :nth-of-type(odd) {
+                background-color: $white-bis;
+            }
+        }
+    }
+}

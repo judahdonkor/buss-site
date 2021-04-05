@@ -1,0 +1,47 @@
+@import "~bulma/sass/utilities/derived-variables";
+@import "~bulma/sass/utilities/mixins";
+
+/* Helpers */
+.has-light-border-bottom {
+  border-bottom: $light-border;
+}
+
+.has-light-border-top {
+  border-top: $light-border;
+}
+
+.has-default-padding {
+  padding: $default-padding;
+}
+
+.has-default-padding-top {
+  padding-top: $default-padding;
+}
+
+.has-default-padding-bottom {
+  padding-bottom: $default-padding;
+}
+
+.has-default-padding-top-bottom {
+  padding-top: $default-padding;
+  padding-bottom: $default-padding;
+}
+
+.has-no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.has-no-padding-top {
+  padding-top: 0;
+}
+
+@include mobile {
+  .is-flex-direction-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.is-clickable {
+  cursor: pointer;
+}

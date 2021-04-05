@@ -1,0 +1,26 @@
+// text
+$text-min-width: 10em !default;
+$text-max-width: 17em !default;
+.field.text:not(.is-expanded) {
+    max-width: $text-max-width;
+    min-width: $text-min-width;
+    @include control-width-adjustments($text-min-width, $text-max-width);
+}
+
+// numeral
+$numeral-min-width: 5em !default;
+$numeral-max-width: 8.5em !default;
+.field.numeral:not(.is-expanded) {
+    max-width: $numeral-max-width;
+    min-width: $numeral-min-width;
+    @include control-width-adjustments($numeral-min-width, $numeral-max-width);
+}
+
+// textarea
+$textarea-min-width: 20em !default;
+$textarea-max-width: 40em !default;
+.field.textarea:not(.is-expanded) {
+    max-width: $textarea-max-width;
+    min-width: $textarea-min-width;
+    @include control-width-adjustments($textarea-min-width, $textarea-max-width);
+}

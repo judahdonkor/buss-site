@@ -1,0 +1,16 @@
+.sidebar {
+  border-right: 1px solid $white-quater;
+  .b-sidebar {
+    .sidebar-content {
+      background-color: transparent;
+      padding: $default-padding;
+      @include mobile {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+  @include mobile {
+    border-top: 1px solid $white-quater;
+  }
+}

@@ -1,0 +1,29 @@
+@import "~bulma/sass/utilities/functions";
+
+$primary: $san-juan;
+
+// Invert colors
+
+$san-juan-invert: findColorInvert($san-juan);
+
+$primary-invert: $san-juan-invert;
+
+// General colors
+
+// $background: transparent;
+
+// Text colors
+
+// Code colors
+
+// Link colors
+
+// Typography
+
+// Lists and maps
+
+// Miscellaneous
+
+$default-padding: $size-base * 1.5;
+$small-padding: $size-base;
+$light-border: 1px solid $white-quater;

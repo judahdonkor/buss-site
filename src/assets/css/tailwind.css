@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+@import './components/_index.css';
+
+@import 'tailwindcss/utilities';
+
+.box-decoration-break-clone {
+    box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
