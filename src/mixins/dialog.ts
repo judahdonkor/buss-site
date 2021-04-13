@@ -5,7 +5,7 @@ type ComfirmParams = {
   state: StateIndicator
   context: string
   message: string
-}
+} & Partial<Record<'confirmText' | 'cancelText', string>>
 
 type PromptParams = ComfirmParams & {
   inputAttrs: { [key in string]: any }
@@ -20,13 +20,15 @@ declare module 'vue/types/vue' {
 
 const Dialog = tsx.component({
   methods: {
-    $confirm({ state, context, message }: ComfirmParams) {
+    $confirm({ state, context, message, confirmText, cancelText }: ComfirmParams) {
       return new Promise<void>((resolve, reject) =>
         this.$buefy.dialog.confirm({
           hasIcon: true,
           type: 'is-' + state,
           message,
           title: context,
+          confirmText,
+          cancelText,
           onConfirm: () => resolve(),
           onCancel: () => reject(Error('$cancelled')),
         })

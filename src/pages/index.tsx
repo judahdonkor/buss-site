@@ -37,7 +37,8 @@ export default tsx.component({
               class='text-dark-onSurfacePrimary mt-3 w-11/12 sm:text-xl  sm:w-9/12 lg:w-7/12 lg:text-2xl'
               domPropsInnerHTML={this.$t('pages.index.hero.description') as any} />
             <b-button
-              class='mt-8 w-auto sm:text-xl lg:text-2xl px-10'
+              class='mt-5'
+              size='is-medium'
               type='is-primary'
               tag="nuxt-link"
               to='/sign-up'>

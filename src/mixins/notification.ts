@@ -6,6 +6,7 @@ type Params = {
   state: StateIndicator
   context: string
   message: string
+  indefinite?: boolean
 }
 
 const parseErrorEntity: (data: any) => string = (data) => `
@@ -51,10 +52,11 @@ const Notification = tsx.component({
     }
   },
   methods: {
-    $notify({ state, context, message }: Params) {
+    $notify({ state, context, message, indefinite }: Params) {
       this.$buefy.notification.open({
         hasIcon: true,
         type: 'is-' + state,
+        indefinite,
         message: `
                 <p class='title is-5'>${context}</p>
                 <P class='subtitle is-6'>${message}</p>
