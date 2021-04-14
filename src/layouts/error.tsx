@@ -15,18 +15,18 @@ const Default = tsx.component({
     },
     render() {
         return (
-            <div class="flex flex-wrap items-center justify-between pt-20 lg:pt-0">
-                <div class="w-full lg:w-1/2 text-center lg:text-left pl-8">
-                    <h1 class="text-6xl font-medium leading-normal text-nuxt-lightgreen">
+            <div class="tw-flex tw-flex-wrap tw-items-center tw-justify-between tw-pt-20 lg:tw-pt-0">
+                <div class="tw-w-full lg:tw-w-1/2 tw-text-center lg:tw-text-left pl-8">
+                    <h1 class="tw-text-6xl tw-font-medium leading-normal tw-text-nuxt-lightgreen">
                         {this.error.statusCode}
                     </h1>
                     <h3
-                        class="text-4xl light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-relaxed mb-6"
+                        class="tw-text-4xl light:tw-text-light-onSurfacePrimary dark:tw-text-dark-onSurfacePrimary tw-font-medium leading-relaxed mb-6"
                     >
                         {this.error.message}
                     </h3>
                 </div>
-                <div class="hidden lg:block lg:w-5/12 xl:w-4/12">
+                <div class="tw-hidden lg:tw-block lg:tw-w-5/12 xl:tw-w-4/12">
                     <mountains-globe-illustration />
                 </div>
             </div>
@@ -58,7 +58,7 @@ export default tsx.component({
     },
     render() {
         return (
-            <div class="relative container mx-auto px-4 ">
+            <div class="relative tw-container tw-mx-auto tw-px-4 ">
                 {this.renderError(this.error)}
             </div>
         )

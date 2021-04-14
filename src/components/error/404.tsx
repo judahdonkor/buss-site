@@ -11,12 +11,12 @@ const Error404 = tsx.component({
     },
     render() {
         return (
-            <div class="pt-20">
-                <div class="flex flex-wrap items-center justify-between">
-                    <h1 class="w-full text-3xl xl:text-4xl light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-center font-medium leading-normal -mb-6 z-10">
+            <div class="tw-pt-20">
+                <div class="tw-flex tw-flex-wrap tw-items-center tw-justify-between">
+                    <h1 class="tw-w-full tw-text-3xl xl:tw-text-4xl light:tw-text-light-onSurfacePrimary dark:tw-text-dark-onSurfacePrimary tw-text-center tw-font-medium leading-normal -mb-6 z-10">
                         {this.error.message}
                     </h1>
-                    <div class="w-full lg:w-2/3 mx-auto">
+                    <div class="tw-w-full lg:tw-w-2/3 tw-mx-auto">
                         <LostImageIllustration />
                     </div>
                 </div>

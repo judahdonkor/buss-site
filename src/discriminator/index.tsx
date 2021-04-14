@@ -20,7 +20,7 @@ const Discriminator = tsx
       return (
         <div>
           {/* <section class='section'>*/}
-          <div class="container">
+          <div class="tw-container">
             <Level>
               <a
                 onClick={async () => {
@@ -44,7 +44,7 @@ const Discriminator = tsx
                   rounded
                   src={this.value.thumbnail || '/images/collecting.svg'}
                   ratio="192x192"
-                  class='w-48 h-48'
+                  class='tw-w-48 tw-h-48'
                 />
                 {/* <figure class="image is-128x128">
                   <img

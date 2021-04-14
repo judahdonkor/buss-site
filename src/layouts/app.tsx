@@ -22,12 +22,12 @@ const AppNavBar = tsx.component({
     return (
       <div>
         <div
-          class='container py-4 flex justify-between'>
-          <p class='font-bold'>
+          class='tw-container tw-py-4 tw-flex tw-justify-between'>
+          <p class='tw-font-bold'>
             {this.app.label}
           </p>
           {/* <div
-            class='flex gap-2'>
+            class='tw-flex tw-gap-2'>
             {[(['Overview', ''] as [string, string]), ...Object.entries(this.app.links)].map(e => (
               <nuxt-link
                 to={`/apps/${this.app.id}/${e[1]}`}>
@@ -51,24 +51,24 @@ const Hero = tsx.component({
   render() {
     return (
       <div
-        class='bg-light-elevatedSurface'>
+        class='tw-bg-light-elevatedSurface'>
         <section
-          class='container py-12 flex flex-col justify-between md:flex-row-reverse items-center'>
-          <div class=' flex-1'>
+          class='tw-container tw-py-12 tw-flex tw-flex-col tw-justify-between md:tw-flex-row-reverse tw-items-center'>
+          <div class=' tw-flex-1'>
             <img
               src={this.app.thumbnail}
               alt=""
               class='p-6' />
           </div>
-          <div class='text-center md:text-left flex-1'>
-            <h1 class='text-light-onSurfacePrimary text-4xl font-black'>
+          <div class='tw-text-center md:tw-text-left tw-flex-1'>
+            <h1 class='tw-text-light-onSurfacePrimary tw-text-4xl tw-font-black'>
               {this.app.label}
             </h1>
-            <h2 class='text-light-onSurfaceSecondary text-xl'>
+            <h2 class='tw-text-light-onSurfaceSecondary tw-text-xl'>
               {this.app.description}
             </h2>
             <b-button
-              class='mt-4 w-full px-12 sm:w-auto'
+              class='tw-mt-4 tw-w-full tw-px-12 sm:tw-w-auto'
               type='is-primary'
               onClick={async () => {
                 alert('CTA')
@@ -96,13 +96,13 @@ export default tsx.component({
   },
   render() {
     return (
-      <div class='flex flex-col min-h-screen'>
+      <div class='tw-flex tw-flex-col min-tw-h-screen'>
         <Navbar />
         <AppNavBar
           app={this.app} />
         <Hero
           app={this.app} />
-        <main class="flex-1">
+        <main class="tw-flex-1">
           <error-503
             error={comingSoon(this.$route.fullPath)} />
           <nuxt />

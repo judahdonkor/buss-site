@@ -1,12 +1,12 @@
 <template>
-  <div class="pt-20">
-    <div class="flex flex-wrap items-center justify-between">
+  <div class="tw-pt-20">
+    <div class="tw-flex tw-flex-wrap tw-items-center tw-justify-between">
       <h1
-        class="z-10 w-full mb-0 text-3xl font-medium leading-normal text-center xl:text-4xl light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+        class="z-10 tw-w-full mb-0 tw-text-3xl tw-font-medium leading-normal tw-text-center xl:tw-text-4xl light:tw-text-light-onSurfacePrimary dark:tw-text-dark-onSurfacePrimary"
       >
         {{ error.message }}
       </h1>
-      <div class="w-full mx-auto lg:w-2/3">
+      <div class="tw-w-full tw-mx-auto lg:tw-w-2/3">
         <svg
           id="Duotone"
           xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ export default {
 .cls-4,
 .cls-5,
 .cls-7 {
-  @apply stroke-current text-gray-200;
+  @apply stroke-current tw-text-gray-200;
 
   /* stroke:#4550e5; */
   stroke-linejoin: round;
@@ -114,12 +114,12 @@ export default {
 
 .cls-5 {
   /* fill:#d6daff; */
-  @apply fill-current text-royal-blue;
+  @apply fill-current tw-text-royal-blue;
 }
 
 .cls-6 {
   /* fill:#d6daff; */
-  @apply fill-current text-cornflower-blue;
+  @apply fill-current tw-text-cornflower-blue;
 }
 
 @keyframes cloudLeft {

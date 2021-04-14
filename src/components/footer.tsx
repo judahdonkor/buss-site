@@ -17,12 +17,12 @@ const Menu = tsx.component({
     render() {
         return (
             <div>
-                <p class='text-medium text-dark-onSurfacePrimary text-lg'>{this.title}</p>
+                <p class='tw-text-medium tw-text-dark-onSurfacePrimary tw-font-black'>{this.title}</p>
                 <div
-                    class='flex flex-col mt-5 gap-3'>
+                    class='tw-flex tw-flex-col tw-mt-5 tw-gap-3'>
                     {this.items.map(item => (
                         <nuxt-link
-                            class='text-dark-onSurfacePrimary hover:text-dark-onSurfaceSecondary transition duration-150 ease-in-out'
+                            class='tw-text-dark-onSurfacePrimary hover:tw-text-dark-onSurfaceSecondary tw-transition tw-duration-150 tw-ease-in-out'
                             to={item[1]}>
                             {item[0]}
                         </nuxt-link>
@@ -43,26 +43,26 @@ const Footer = tsx.component({
                     // 'background-color': 'hsl(215, 40%, 31%)'
                 }}
             >
-                <div class='container py-16'>
-                    <div class='flex flex-col lg:flex-row gap-12'>
+                <div class='tw-container tw-py-16'>
+                    <div class='tw-flex tw-flex-col lg:tw-flex-row tw-gap-12'>
                         <div
-                            class='flex-1 flex flex-col items-center md:items-start'>
+                            class='tw-flex-1 tw-flex tw-flex-col tw-items-center md:tw-items-start'>
                             <nuxt-link
-                                class='text-dark-onSurfacePrimary flex'
+                                class='tw-text-dark-onSurfacePrimary tw-flex'
                                 to='/'>
-                                {/* <Icon class='fill-current h-8 w-auto' /> */}
-                                <Wordmark class='fill-current h-8 w-auto' />
+                                {/* <Icon class='tw-fill-current tw-h-8 tw-w-auto' /> */}
+                                <Wordmark class='tw-fill-current tw-h-8 tw-w-auto' />
                             </nuxt-link>
                             <div
-                                class='h-px w-full my-2 lg:my-6 lg:bg-dark-onSurfaceSecondary' />
-                            <h1 class='w-full text-dark-onSurfacePrimary text-2xl font-medium text-center md:text-left'>
+                                class='tw-h-px tw-w-full tw-my-2 lg:tw-my-6 lg:tw-bg-dark-onSurfaceSecondary' />
+                            <h1 class='tw-w-full tw-text-dark-onSurfacePrimary tw-text-2xl tw-font-medium tw-text-center md:tw-text-left'>
                                 {this.$t('pages.index.hero.slogan')}
                             </h1>
                             <h2
-                                class=' w-full text-dark-onSurfaceSecondary text-base text-center md:text-left'
+                                class=' tw-w-full tw-text-dark-onSurfaceSecondary tw-text-base tw-text-center md:tw-text-left'
                                 domPropsInnerHTML={this.$t('pages.index.hero.description') as any} />
                         </div>
-                        <div class='flex-1 grid grid-cols-2 md:grid-cols-3 gap-12'>
+                        <div class='tw-flex-1 tw-grid tw-grid-cols-2 md:tw-grid-cols-3 tw-gap-12'>
                             <Menu
                                 title='Solutions'
                                 items={[
@@ -89,9 +89,9 @@ const Footer = tsx.component({
                         </div>
                     </div>
                     <div
-                        class='flex flex-col gap-12 lg:flex-row justify-between text-dark-onSurfaceSecondary pt-12 text-xs'>
+                        class='tw-flex tw-flex-col tw-gap-12 lg:tw-flex-row tw-justify-between tw-text-dark-onSurfaceSecondary tw-pt-12 tw-text-xs'>
                         <div
-                            class='flex jus gap-6'>
+                            class='tw-flex jus tw-gap-6'>
                             {[
                                 [IconFacebookBrands, '#0'],
                                 [IconTwitterBrands, '#0'],
@@ -102,14 +102,14 @@ const Footer = tsx.component({
                                 [IconEnvelopeSolid, '#0'],
                             ].map(([Tag, to]) => (
                                 <a
-                                    class='text-dark-onSurfaceSecondary hover:text-dark-onSurfacePrimary transition duration-150 ease-in-out'
+                                    class='tw-text-dark-onSurfaceSecondary hover:tw-text-dark-onSurfacePrimary tw-transition tw-duration-150 tw-ease-in-out'
                                     href={to}>
-                                    <Tag class='h-5 w-5 fill-current' />
+                                    <Tag class='tw-h-5 tw-w-5 tw-fill-current' />
                                 </a>
                             ))}
                         </div>
                         <div
-                            class='flex justify-between gap-6'>
+                            class='tw-flex tw-justify-between tw-gap-6'>
                             <nuxt-link
                                 to='#0'>
                                 English
@@ -117,10 +117,10 @@ const Footer = tsx.component({
                         </div>
                     </div>
                     <div
-                        class='flex justify-between text-dark-onSurfaceSecondary pt-12 text-xs'>
+                        class='tw-flex tw-justify-between tw-text-dark-onSurfaceSecondary tw-pt-12 tw-text-xs'>
                         <span>© 2020 Buss</span>
                         <div
-                            class='flex justify-between gap-6'>
+                            class='tw-flex tw-justify-between tw-gap-6'>
                             <nuxt-link
                                 to='#0'>
                                 Privacy

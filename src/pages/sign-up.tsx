@@ -78,7 +78,7 @@ export default tsx.component({
                       handleSubmit(() => this.signUp())
                     }}>
                     <div class="has-text-centered">
-                      <div class='tw-inline-flex tw-items-center tw-gap-1'>
+                      <div class='tw-inline-tw-flex tw-items-center tw-gap-1'>
                         <Abstract class='tw-h-24 tw-w-24' />
                         {/* <span class='has-text-space-removed title'>Buss</span> */}
                       </div>

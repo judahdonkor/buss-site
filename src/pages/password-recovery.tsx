@@ -49,7 +49,7 @@ export default tsx.componentFactory.create({
                   <div class='has-text-centered'>
                     <Abstract class='tw-h-24 tw-w-24' />
                   </div>
-                  {/* <p class="title has-text-centered is-spaced is-5 mb-5 mt-5">Recover account</p> */}
+                  {/* <p class="title has-text-centered is-spaced is-5 mb-5 tw-mt-5">Recover account</p> */}
                   <Input
                     rules="required|email"
                     label="Email"

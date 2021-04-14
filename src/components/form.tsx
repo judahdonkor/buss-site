@@ -119,7 +119,7 @@ const Form = tsx.componentFactory
         )
         return (
           <header class='modal-card-head is-justify-content-center'>
-            <div class={`w-full container px-5 ${this.fullScreen
+            <div class={`tw-w-full tw-container tw-px-5 ${this.fullScreen
               ? 'is-hidden-desktop'
               : ''}`}>
               <div class='columns is-mobile is-vcentered'>
@@ -148,7 +148,7 @@ const Form = tsx.componentFactory
               {this.sections && sections}
             </div>
             {this.fullScreen && (
-              <div class='w-full container is-fluid is-hidden-touch'>
+              <div class='tw-w-full tw-container is-fluid tw-is-hidden-touch'>
                 <div class='columns is-vcentered'>
                   <div class='column is-narrow'>
                     <a
@@ -246,7 +246,7 @@ const Form = tsx.componentFactory
           scopedSlots={{
             default: ({ handleSubmit }: any) => (
               <form
-                class={`jd-form modal-card w-auto  ${this.sections ? 'jd-sectioned' : ''}`}
+                class={`jd-form modal-card tw-w-auto  ${this.sections ? 'jd-sectioned' : ''}`}
                 onSubmit={(e: Event) => {
                   e.preventDefault()
                   handleSubmit(this.submit)

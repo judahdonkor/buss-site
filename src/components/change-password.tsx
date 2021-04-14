@@ -28,7 +28,7 @@ const ChangePassword = tsx
     render() {
       return (
         <section class="section">
-          <div class="container">
+          <div class="tw-container">
             <Input
               label='Password'
               rules='required'

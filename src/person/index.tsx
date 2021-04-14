@@ -97,15 +97,15 @@ const Person = tsx
             }}
             value={this.value.email}
             onInput={(val: string) => {
-              if ((this.$options as any).timer) {
-                clearTimeout((this.$options as any).timer)
-                  ; (this.$options as any).timer = null
-              }
-              ; (this.$options as any).timer = setTimeout(
-                () => this.updateContact(assoc('email', val, this.value)),
-                800
-              )
-            }}
+            if ((this.$options as any).timer) {
+              clearTimeout((this.$options as any).timer)
+                ; (this.$options as any).timer = null
+            }
+            ; (this.$options as any).timer = setTimeout(
+              () => this.updateContact(assoc('email', val, this.value)),
+              800
+            )
+          }}
           />
           <b-field
             label="Phone number (optional)"

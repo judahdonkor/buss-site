@@ -4,9 +4,9 @@ import { Footer, Navbar } from '~/components'
 export default tsx.component({
   render() {
     return (
-      <div class='flex flex-col min-h-screen'>
+      <div class='tw-flex tw-flex-col min-tw-h-screen'>
         <Navbar />
-        <main class="flex-1">
+        <main class="tw-flex-1">
           <nuxt />
         </main>
         <Footer />

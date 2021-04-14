@@ -9,20 +9,20 @@ export default tsx.component({
     return (
       <div>
         {/* {Object.entries(groupBy(e => e[1].class, Object.entries(this.$t('apps')))).map((cls, idx) => (
-          <div class={`${idx % 2 === 1 ? 'bg-light-elevatedSurface' : ''}`}>
-            <section class='container py-10'>
-              <div class='flex-1'>
-                <h1 class='text-light-onSurfacePrimary text-4xl font-black text-center sm:text-5xl sm:text-left'>
+          <div class={`${idx % 2 === 1 ? 'tw-bg-light-elevatedSurface' : ''}`}>
+            <section class='tw-container tw-py-10'>
+              <div class='tw-flex-1'>
+                <h1 class='tw-text-light-onSurfacePrimary tw-text-4xl tw-font-black tw-text-center sm:tw-text-5xl sm:tw-text-left'>
                   {this.$t(`app_classes.${cls[0]}.label`)}
                 </h1>
-                <h2 class='text-light-onSurfaceSecondary my-5 text-xl text-center sm:text-left sm:text-2xl'>
+                <h2 class='tw-text-light-onSurfaceSecondary tw-my-5 tw-text-xl tw-text-center sm:tw-text-left sm:tw-text-2xl'>
                   {this.$t(`app_classes.${cls[0]}.description`)}
                 </h2>
               </div>
-              <div class='grid gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3'>
+              <div class='tw-grid tw-gap-6 tw-grid-cols-1 sm:tw-grid-cols-2 xl:tw-grid-cols-3'>
                 {cls[1].map(([key, { label, description, thumbnail }]) => (
                   <AppCard
-                    class={`${idx % 2 === 1 ? 'bg-light-surface' : 'bg-light-elevatedSurface'} p-8 rounded-md shadow-sm hover:shadow-md transition duration-150 ease-in-out`}
+                    class={`${idx % 2 === 1 ? 'tw-bg-light-surface' : 'tw-bg-light-elevatedSurface'} tw-p-8 tw-rounded-md tw-shadow-sm hover:tw-shadow-md tw-transition tw-duration-150 tw-ease-in-out`}
                     label={label}
                     description={description}
                     thumbnail={thumbnail} />

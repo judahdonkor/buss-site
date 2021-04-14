@@ -45,20 +45,20 @@ export default tsx.component({
   },
   render() {
     return (
-      <div class="container">
-        <div class='pt-6'>
+      <div class="tw-container">
+        <div class='tw-pt-6'>
           {this.libraries.map(({ title, description, id, collections }) => (
             <div id={id}>
-              <h1 class='text-4xl'>{title}</h1>
-              <h2 class='text-base'>{description}</h2>
-              <nav class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-6 pb-12'>
+              <h1 class='tw-text-4xl'>{title}</h1>
+              <h2 class='tw-text-base'>{description}</h2>
+              <nav class='tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 lg:tw-grid-cols-3 xl:tw-grid-cols-4 tw-gap-6 tw-pt-6 tw-pb-12'>
                 {collections.map(({ title: collTitle, description: collDescription, id: collId, to }) => (
                   <nuxt-link
                     to={to}
                     id={collId}
-                    class='bg-light-elevatedSurface p-8 rounded-md shadow-sm hover:shadow-md group transition duration-150 ease-in-out'>
-                    <p class='text-2xl text-light-onSurfacePrimary group-hover:text-cornflower-blue'>{collTitle}</p>
-                    <p class='text-light-onSurfaceSecondary'>{collDescription}</p>
+                    class='tw-bg-light-elevatedSurface tw-p-8 tw-rounded-md tw-shadow-sm hover:tw-shadow-md group tw-transition tw-duration-150 tw-ease-in-out'>
+                    <p class='tw-text-2xl tw-text-light-onSurfacePrimary group-hover:tw-text-cornflower-blue'>{collTitle}</p>
+                    <p class='tw-text-light-onSurfaceSecondary'>{collDescription}</p>
                   </nuxt-link>
                 ))}
               </nav>

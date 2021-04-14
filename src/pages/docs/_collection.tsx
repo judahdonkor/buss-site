@@ -35,36 +35,36 @@ const AsideNavMobile = tsx.component({
           if (this.show)
             this.show = false
         }}
-        class={`docs header_mobile_aside shadow-nuxt fixed left-0 z-20 w-full sm:w-1/2 ${this.show ? 'header_mobile_aside--open' : ''}`}
+        class={`docs header_mobile_aside tw-shadow-nuxt fixed tw-left-0 z-20 tw-w-full sm:tw-w-1/2 ${this.show ? 'header_mobile_aside--open' : ''}`}
 
       >
-        <div class="mx-auto h-full bg-light-surface transition-colors duration-300 ease-linear">
-          <div class="content-wrapper h-full relative">
-            <div class="overflow-y-auto h-full pt-4">
+        <div class="mx-auto tw-h-full tw-bg-light-surface tw-transition-colors duration-300 ease-linear">
+          <div class="content-wrapper tw-h-full relative">
+            <div class="overflow-y-auto tw-h-full tw-pt-4">
               {Object.entries(this.sortedLinks).map(link => {
                 const CatTag = this.$route.params.book === link[0] ? 'h3' : 'nuxt-link'
                 return (
                   <div class="header_mobile_aside_group">
                     <CatTag
                       to={`/docs/${this.$route.params.collection}/${link[1][0].book}/${link[1][0].slug}`}
-                      class={`flex items-center uppercase text-gray-600 pb-2 ${this.$route.params.book === link[0] ? 'font-bold' : 'hover:text-cornflower-blue mb-4 block'}`}
+                      class={`tw-flex tw-items-center uppercase tw-text-gray-600 tw-pb-2 ${this.$route.params.book === link[0] ? 'tw-font-bold' : 'hover:tw-text-cornflower-blue mb-4 tw-block'}`}
                     // nativeOnClick={() => this.show = false}
                     >
                       {this.$route.params.book === link[0] && (
-                        <IconChevronDownSolid class="w-4 h-4 mr-2" />
+                        <IconChevronDownSolid class="tw-w-4 tw-h-4 mr-2" />
                       )}
                       {this.$route.params.book !== link[0] && (
-                        <IconChevronRightSolid class="w-4 h-4 mr-2" />
+                        <IconChevronRightSolid class="tw-w-4 tw-h-4 mr-2" />
                       )}
                       <span>{this.$t(`content.docs.${this.$route.params.collection}.${link[0]}`)}</span>
                     </CatTag>
                     {this.$route.params.book === link[0] && (
-                      <ul class="pb-6 pl-6">
+                      <ul class="tw-pb-6 pl-6">
                         {link[1].map(article => (
-                          <li class="py-2">
+                          <li class="tw-py-2">
                             <nuxt-link
-                              class="block dark:text-dark-onSurfacePrimary hover:text-cornflower-blue transition-colors duration-300 ease-linear"
-                              exact-active-class="text-cornflower-blue"
+                              class="tw-block dark:tw-text-dark-onSurfacePrimary hover:tw-text-cornflower-blue tw-transition-colors duration-300 ease-linear"
+                              exact-active-class="tw-text-cornflower-blue"
                               to={`/docs/${this.$route.params.collection}/${this.$route.params.book}/${article.slug}`}
                               nativeOnClick={() => this.show = false}>
                               {article.label || article.title}
@@ -78,20 +78,20 @@ const AsideNavMobile = tsx.component({
               })}
             </div>
             <button
-              class="inner-button sm:hidden absolute h-10 w-10 flex items-center justify-center text-nuxt-gray bg-gray-200 dark:bg-dark-elevatedSurface dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
+              class="inner-button sm:tw-hidden tw-absolute tw-h-10 tw-w-10 tw-flex tw-items-center tw-justify-center tw-text-nuxt-gray tw-bg-gray-200 dark:bg-dark-elevatedSurface dark:tw-text-dark-onSurfaceSecondary tw-transition-colors duration-300 ease-linear"
               onClick={() => this.show = false}>
-              <IconTimesSolid class="block h-5 fill-current transition-colors duration-300 ease-linear" />
+              <IconTimesSolid class="tw-block tw-h-5 tw-fill-current tw-transition-colors duration-300 ease-linear" />
             </button>
           </div>
 
           <button
-            class="bookmark-button absolute h-10 w-10 flex items-center justify-center text-nuxt-gray bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
+            class="bookmark-button tw-absolute tw-h-10 tw-w-10 tw-flex tw-items-center tw-justify-center tw-text-nuxt-gray tw-bg-gray-200 dark:bg-dark-surface dark:tw-text-dark-onSurfaceSecondary tw-transition-colors duration-300 ease-linear"
             onClick={() => this.show = !this.show}>
             {!this.show && (
-              <IconListUlSolid class="block h-5 fill-current stroke-current transition-colors duration-300 ease-linear" />
+              <IconListUlSolid class="tw-block tw-h-5 tw-fill-current stroke-current tw-transition-colors duration-300 ease-linear" />
             )}
             {this.show && (
-              <IconTimesSolid class="block h-5 fill-current transition-colors duration-300 ease-linear" />
+              <IconTimesSolid class="tw-block tw-h-5 tw-fill-current tw-transition-colors duration-300 ease-linear" />
             )}
           </button>
         </div>
@@ -120,34 +120,34 @@ const AsideNav = tsx.component({
   },
   render() {
     return (
-      <aside class="opacity-transition block bg-gray-100 mt-8 -mx-4 lg:bg-transparent lg:mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block">
-        <div class="h-full overflow-y-auto scrolling-touch text-center lg:text-left lg:h-auto lg:block lg:sticky lg:top-0">
+      <aside class="opacity-tw-transition tw-block tw-bg-gray-100 tw-mt-8 -mx-4 lg:bg-transparent lg:tw-mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:tw-h-auto lg:overflow-y-visible lg:tw-pt-0 lg:tw-w-1/4 lg:tw-block">
+        <div class="tw-h-full overflow-y-auto scrolling-touch tw-text-center lg:tw-text-left lg:tw-h-auto lg:tw-block lg:sticky lg:totw-p-0">
           <nav
-            class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:max-h-(screen-24)" >
+            class="tw-pt-8 lg:overflow-y-auto lg:tw-block lg:pl-0 lg:pr-8 sticky?lg:max-tw-h-(screen-24)" >
             {Object.entries(this.sortedLinks).map(link => {
               const CatTag = this.$route.params.book === link[0] ? 'h3' : 'nuxt-link'
               return (
                 <div>
                   <CatTag
                     to={`/docs/${this.$route.params.collection}/${link[1][0].book}/${link[1][0].slug}`}
-                    class={`flex items-center uppercase font-medium text-light-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear ${this.$route.params.book === link[0] ? 'font-bold' : 'hover:text-cornflower-blue mb-4 block'}`}
+                    class={`tw-flex tw-items-center uppercase tw-font-medium tw-text-light-onSurfaceSecondary tw-pb-2 tw-transition-colors duration-300 ease-linear ${this.$route.params.book === link[0] ? 'tw-font-bold' : 'hover:tw-text-cornflower-blue mb-4 tw-block'}`}
                   // nativeOnClick={() => this.show = false}
                   >
                     {this.$route.params.book === link[0] && (
-                      <IconChevronDownSolid class="w-4 h-4 mr-2" />
+                      <IconChevronDownSolid class="tw-w-4 tw-h-4 mr-2" />
                     )}
                     {this.$route.params.book !== link[0] && (
-                      <IconChevronRightSolid class="w-4 h-4 mr-2" />
+                      <IconChevronRightSolid class="tw-w-4 tw-h-4 mr-2" />
                     )}
                     <span>{this.$t(`content.docs.${this.$route.params.collection}.${link[0]}`)}</span>
                   </CatTag>
                   {this.$route.params.book === link[0] && (
-                    <ul class="pb-8 pl-2">
+                    <ul class="tw-pb-8 pl-2">
                       {link[1].map(article => (
-                        <li class="text-light-onSurfacePrimary">
+                        <li class="tw-text-light-onSurfacePrimary">
                           <nuxt-link
-                            exact-active-class="text-cornflower-blue bg-blue-100"
-                            class="p-2 pl-4 flex rounded hover:text-cornflower-blue transition-colors duration-300 ease-linear"
+                            exact-active-class="tw-text-cornflower-blue bg-blue-100"
+                            class="p-2 pl-4 tw-flex rounded hover:tw-text-cornflower-blue tw-transition-colors duration-300 ease-linear"
                             to={`/docs/${this.$route.params.collection}/${this.$route.params.book}/${article.slug}`}>
                             {article.label || article.title}
                           </nuxt-link>
@@ -191,11 +191,11 @@ export default tsx.component({
   },
   render() {
     return (
-      <div class="shadow-nuxt">
-        <div class="container mx-auto px-4 lg:flex pb-12">
-          <AsideNavMobile links={this.links} class='block lg:hidden' />
-          <AsideNav links={this.links} class="hidden lg:block" />
-          <div class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4">
+      <div class="tw-shadow-nuxt">
+        <div class="tw-container tw-mx-auto tw-px-4 lg:tw-flex tw-pb-12">
+          <AsideNavMobile links={this.links} class='tw-block lg:tw-hidden' />
+          <AsideNav links={this.links} class="tw-hidden lg:tw-block" />
+          <div class="min-tw-h-screen tw-w-full lg:static lg:max-tw-h-full lg:overflow-visible lg:tw-w-3/4">
             <nuxt-child />
           </div>
         </div>

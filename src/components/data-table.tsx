@@ -47,7 +47,7 @@ const Actions = tsx.componentFactoryOf<{
   },
   render() {
     return (
-      <div class='px-6'>
+      <div class='tw-px-6'>
         <b-field label="Rows:" horizontal>
           <b-select
             value={this.value}
@@ -263,7 +263,7 @@ const DataTable = tsx.componentFactoryOf<EventsWithOn>()
           }}
         >
           {this.$slots.default}
-          <div slot='empty' class='has-text-centered py-6'>
+          <div slot='empty' class='has-text-centered tw-py-6'>
             <b-icon
               icon={this.loading ? 'spinner' : 'frown'}
               type='is-primary'

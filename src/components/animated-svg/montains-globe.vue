@@ -68,7 +68,7 @@
 .cls-4,
 .cls-5,
 .cls-7 {
-  @apply stroke-current text-gray-200;
+  @apply stroke-current tw-text-gray-200;
 
   /* stroke:#4550e5; */
   stroke-linejoin: round;
@@ -86,12 +86,12 @@
 
 .cls-5 {
   /* fill:#d6daff; */
-  @apply fill-current text-royal-blue;
+  @apply fill-current tw-text-royal-blue;
 }
 
 .cls-6 {
   /* fill:#d6daff; */
-  @apply fill-current text-cornflower-blue;
+  @apply fill-current tw-text-cornflower-blue;
 }
 
 @keyframes cloudLeft {

@@ -10,26 +10,26 @@ const Toc = tsx.component({
   },
   render() {
     return (
-      <div class="lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block">
-        <div class="lg:overflow-y-auto lg:scrolling-touch lg:h-auto lg:block lg:sticky lg:top-0">
-          <div class="flex flex-col sm:flex-row px-4 pt-8 justify-between lg:justify-start lg:flex-col lg:overflow-y-auto overflow-x-hidden lg:pr-0 lg:pl-8 sticky?lg:max-h-(screen-24)">
-            <div class="mb-8 block">
-              <h6 class="mb-3 lg:mb-2 text-gray-500 dark:text-gray-600 uppercase tracking-wide font-bold text-sm lg:text-xs">
+      <div class="lg:inset-0 z-90 lg:mb-0 lg:static lg:tw-h-auto lg:overflow-y-visible lg:tw-pt-0 lg:tw-w-1/4 lg:tw-block">
+        <div class="lg:overflow-y-auto lg:scrolling-touch lg:tw-h-auto lg:tw-block lg:sticky lg:totw-p-0">
+          <div class="tw-flex tw-flex-col sm:tw-flex-row tw-px-4 tw-pt-8 tw-justify-between lg:tw-justify-start lg:tw-flex-col lg:overflow-y-auto overflow-x-tw-hidden lg:pr-0 lg:pl-8 sticky?lg:max-tw-h-(screen-24)">
+            <div class="mb-8 tw-block">
+              <h6 class="mb-3 lg:mb-2 tw-text-gray-500 dark:tw-text-gray-600 uppercase tracking-wide tw-font-bold tw-text-sm lg:tw-text-xs">
                 {this.$t('pages.docs.toc_title')}
               </h6>
               <nav>
                 <scrollactive
                   highlight-first-item
-                  active-class="text-cornflower-blue"
+                  active-class="tw-text-cornflower-blue"
                   tag="ul"
                   offset={100}>
                   {this.toc.map(link => (
                     <li
-                      class={`text-gray-600 ${link.depth === 2 ? 'border-t border-dashed dark:border-gray-800 first:border-t-0 font-semibold' : ''}`}>
+                      class={`tw-text-gray-600 ${link.depth === 2 ? 'tw-border-t tw-border-dashed dark:tw-border-gray-800 first:tw-border-t-0 tw-font-semibold' : ''}`}>
                       <nuxt-link
                         to={`#${link.id}`}
                         data-cy="toc"
-                        class={`block text-sm scrollactive-item transition-transform ease-in-out duration-300 transform hover:translate-x-1 ${link.depth === 2 ? 'py-2' : ''} ${link.depth === 3 ? 'ml-2 pb-2' : ''}`}>
+                        class={`tw-block tw-text-sm scrollactive-item tw-transition-tw-transform tw-ease-in-out duration-300 tw-transform hover:translate-x-1 ${link.depth === 2 ? 'tw-py-2' : ''} ${link.depth === 3 ? 'tw-ml-2 tw-pb-2' : ''}`}>
                         {link.text}
                       </nuxt-link>
                     </li>
@@ -115,20 +115,20 @@ export default tsx.component({
   },
   render() {
     return (
-      <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
-        <div class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4">
+      <div class="-mx-4 lg:mx-0 tw-flex tw-flex-col-reverse lg:tw-flex-row">
+        <div class="lg:min-tw-h-screen tw-w-full tw-py-8 tw-px-4 lg:static lg:overflow-visible lg:max-tw-h-full lg:tw-w-3/4">
           {/* <LangFallback :doc-link="docLink" :lang-fallback="langFallback" /> */}
 
           <article>
-            <h1 class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear docs-content-title">
+            <h1 class="tw-text-light-onSurfacePrimary dark:tw-text-dark-onSurfacePrimary tw-transition-colors duration-300 ease-linear docs-content-title">
               {this.page.title}
             </h1>
             <nuxt-content document={this.page} />
-            <div class='flex justify-between'>
+            <div class='tw-flex tw-justify-between'>
               <div class='p-2 pl-0'>
                 {this.prev && (
-                  <nuxt-link class='flex items-center text-cornflower-blue font-bold hover:underline' to={`/docs/${this.collection}/${this.book}/${this.prev.slug}`}>
-                    <svg class='h-5 w-5 mr-1' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <nuxt-link class='tw-flex tw-items-center tw-text-cornflower-blue tw-font-bold hover:underline' to={`/docs/${this.collection}/${this.book}/${this.prev.slug}`}>
+                    <svg class='tw-h-5 tw-w-5 mr-1' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                     </svg>
                     {this.prev.menu || this.prev.title}
@@ -137,9 +137,9 @@ export default tsx.component({
               </div>
               <div class='p-2 pr-0'>
                 {this.next && (
-                  <nuxt-link class='flex items-center text-cornflower-blue font-bold hover:underline text-right' to={`/docs/${this.collection}/${this.book}/${this.next.slug}`}>
+                  <nuxt-link class='tw-flex tw-items-center tw-text-cornflower-blue tw-font-bold hover:underline tw-text-right' to={`/docs/${this.collection}/${this.book}/${this.next.slug}`}>
                     {this.next.menu || this.next.title}
-                    <svg class='h-5 w-5 ml-1' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class='tw-h-5 tw-w-5 tw-ml-1' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </nuxt-link>

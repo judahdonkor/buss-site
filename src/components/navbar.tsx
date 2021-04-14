@@ -29,38 +29,38 @@ const Navbar = tsx.component({
     render() {
         return (
             <header
-            // class="bg-light-elevatedSurface border-b border-light-border lg:border-0  transition-colors duration-300 ease-linear"
+            // class="tw-bg-light-elevatedSurface tw-border-b tw-border-light-border lg:tw-border-0  tw-transition-colors duration-300 ease-linear"
             >
                 <div
-                    class='h-16 bg-light-elevatedSurface'
-                // class="container max-w-7xl mx-auto px-2 sm:px-6 lg:px-8"
+                    class='tw-h-16 tw-bg-light-elevatedSurface'
+                // class="tw-container max-tw-w-7xl tw-mx-auto tw-px-2 sm:tw-px-6 lg:tw-px-8"
                 >
-                    <div class="container h-full flex items-center">
+                    <div class="tw-container tw-h-full tw-flex tw-items-center">
                         <div
-                            class='sm:hidden text-light-onSurfaceSecondary hover:text-light-onSurfacePrimary focus:outline-none transition duration-150 ease-in-out relative cursor-pointer'
+                            class='sm:tw-hidden tw-text-light-onSurfaceSecondary hover:tw-text-light-onSurfacePrimary focus:tw-outline-none tw-transition tw-duration-150 tw-ease-in-out relative cursor-pointer'
                             onClick={() => this.burger = !this.burger}>
-                            <IconBarsSolid class={`h-6 w-6 ${this.burger ? 'opacity-100 ease-out delay-200' : 'opacity-0 ease-in'} transition duration-100`} />
-                            <IconTimesSolid class={`h-6 w-6 absolute top-0 left-0 ${this.burger ? 'opacity-0 ease-in rotate-180 scale-0' : 'opacity-100 ease-out rotate-0 delay-100 scale-100'} transition transform duration-200`} />
+                            <IconBarsSolid class={`tw-h-6 tw-w-6 ${this.burger ? 'tw-opacity-100 tw-ease-out tw-delay-200' : 'tw-opacity-0 tw-ease-in'} tw-transition tw-duration-100`} />
+                            <IconTimesSolid class={`tw-h-6 tw-w-6 tw-absolute tw-top-0 tw-left-0 ${this.burger ? 'tw-opacity-0 tw-ease-in tw-rotate-180 tw-scale-0' : 'tw-opacity-100 tw-ease-out tw-rotate-0 tw-delay-100 tw-scale-100'} tw-transition tw-transform tw-duration-200`} />
                         </div>
-                        <div class="flex-1 flex items-center justify-center sm:justify-start">
+                        <div class="tw-flex-1 tw-flex tw-items-center tw-justify-center sm:tw-justify-start">
                             <nuxt-link
-                                class='flex items-center text-light-onSurfacePrimary hover:text-cornflower-blue transition duration-150 ease-in-out'
+                                class='tw-flex tw-items-center tw-text-light-onSurfacePrimary hover:tw-text-cornflower-blue tw-transition tw-duration-150 tw-ease-in-out'
                                 to='/'>
-                                <Abstract class='h-8 w-auto' />
-                                <div class='sm:hidden md:block' style={{
-                                    'flex-basis': '0.4rem'
+                                <Abstract class='tw-h-8 tw-w-auto' />
+                                <div class='sm:tw-hidden md:tw-block' style={{
+                                    'tw-flex-basis': '0.4rem'
                                 }} />
-                                <Wordmark class='sm:hidden md:block fill-current h-6 w-auto' />
+                                <Wordmark class='sm:tw-hidden md:tw-block tw-fill-current tw-h-6 tw-w-auto' />
                             </nuxt-link>
-                            <div class="hidden sm:block ">
-                                <nav class="pl-3">
+                            <div class="tw-hidden sm:tw-block ">
+                                <nav class="tw-pl-3">
                                     {Object.entries(this.$t('components.navbar.links')).filter(e => {
                                         if (e[0] === 'sign_in') return false
                                         if (e[0] === 'account' && !this.$accessor.person) return false
                                         return true
                                     }).map(link => (
                                         <nuxt-link
-                                            class={`font-medium px-4 hover:text-light-onSurfaceSecondary transition duration-150 ease-in-out ${this.$route.fullPath.startsWith(`/${link[0]}`) ? 'text-light-onSurfaceSecondary' : 'text-light-onSurfacePrimary'}`}
+                                            class={`tw-font-medium tw-px-4 hover:tw-text-light-onSurfaceSecondary tw-transition tw-duration-150 tw-ease-in-out ${this.$route.fullPath.startsWith(`/${link[0]}`) ? 'tw-text-light-onSurfaceSecondary' : 'tw-text-light-onSurfacePrimary'}`}
                                             to={`/${link[0]}`}
                                             onClick={() => this.reset()}>
                                             {link[1]}
@@ -69,21 +69,21 @@ const Navbar = tsx.component({
                                 </nav>
                             </div>
                         </div>
-                        <div class='flex items-center'>
+                        <div class='tw-flex tw-items-center'>
                             {!this.$accessor.person && [
                                 (
                                     <nuxt-link
                                         // tag='button'
-                                        class='font-medium md:px-4 text-light-onSurfacePrimary hover:text-light-onSurfaceSecondary flex items-center transition duration-150 ease-in-out'
+                                        class='tw-font-medium md:tw-px-4 tw-text-light-onSurfacePrimary hover:tw-text-light-onSurfaceSecondary tw-flex tw-items-center tw-transition tw-duration-150 tw-ease-in-out'
                                         to='/sign-in'
                                         onClick={() => this.reset()}>
-                                        <span class='hidden lg:block'>{this.$t('components.navbar.links.sign_in')}</span>
-                                        <IconSignInSolid class='h-6 w-6 ml-2 lg:hidden block' />
+                                        <span class='tw-hidden lg:tw-block'>{this.$t('components.navbar.links.sign_in')}</span>
+                                        <IconSignInSolid class='tw-h-6 tw-w-6 tw-ml-2 lg:tw-hidden tw-block' />
                                     </nuxt-link>
                                 ),
                                 (
                                     <b-button
-                                        class='hidden md:block w-auto ml-4 font-medium'
+                                        class='tw-hidden md:tw-block tw-w-auto tw-ml-4 tw-font-medium'
                                         type='is-primary'
                                         tag="nuxt-link"
                                         to='/sign-up'>
@@ -100,7 +100,7 @@ const Navbar = tsx.component({
                                 >
                                     <a slot="trigger" role="button">
                                         <img
-                                            class='w-8 h-8 rounded-full border-light-surface border-8 shadow-2xl'
+                                            class='tw-w-8 tw-h-8 tw-rounded-full tw-border-light-surface tw-border-8 tw-tw-shadow-2xl'
                                             src={
                                                 this.$accessor.person.photo ||
                                                 (this.$accessor.person.gender === 'FEMALE'
@@ -125,7 +125,7 @@ const Navbar = tsx.component({
                                         <div class="columns is-mobile is-vcentered">
                                             <div class="column is-narrow">
                                                 <img
-                                                    class='w-8 h-8 rounded-full border-light-surface border-8 shadow-2xl'
+                                                    class='tw-w-8 tw-h-8 tw-rounded-full tw-border-light-surface tw-border-8 tw-tw-shadow-2xl'
                                                     src={
                                                         this.$accessor.person.photo ||
                                                         (this.$accessor.person.gender === 'FEMALE'
@@ -215,8 +215,8 @@ const Navbar = tsx.component({
                     </div>
                 </div>
 
-                <div class={`lg:hidden ${this.burger ? 'hidden' : 'block'}`}>
-                    <div class="px-2 pt-2 pb-3">
+                <div class={`lg:tw-hidden ${this.burger ? 'tw-hidden' : 'tw-block'}`}>
+                    <div class="tw-px-2 tw-pt-2 tw-pb-3">
                         {Object.entries(this.$t('components.navbar.links')).filter(e => e[0] !== 'sign_in').map((link, idx) => (
                             <nuxt-link
                                 class={`${idx !== Object.entries(this.$t('components.navbar.links')).filter(e => {
@@ -224,8 +224,8 @@ const Navbar = tsx.component({
                                     if (e[0] === 'account' && !this.$accessor.person) return false
                                     return true
                                 }).length - 1
-                                    ? 'border-b'
-                                    : ''} flex px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 transition duration-150 ease-in-out`}
+                                    ? 'tw-border-b'
+                                    : ''} tw-flex tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-text-gray-900 hover:tw-bg-gray-100 focus:tw-outline-none focus:tw-bg-gray-200 tw-transition tw-duration-150 tw-ease-in-out`}
                                 to={`/${link[0]}`}
                                 onClick={() => this.reset()}>
                                 {link[1]}
