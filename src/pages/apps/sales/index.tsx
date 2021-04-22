@@ -8,29 +8,40 @@ export default tsx.component({
   render() {
     return (
       <div>
-        {/* {Object.entries(groupBy(e => e[1].class, Object.entries(this.$t('apps')))).map((cls, idx) => (
-          <div class={`${idx % 2 === 1 ? 'tw-bg-light-elevatedSurface' : ''}`}>
-            <section class='tw-container tw-py-10'>
-              <div class='tw-flex-1'>
-                <h1 class='tw-text-light-onSurfacePrimary tw-text-4xl tw-font-black tw-text-center sm:tw-text-5xl sm:tw-text-left'>
-                  {this.$t(`app_classes.${cls[0]}.label`)}
-                </h1>
-                <h2 class='tw-text-light-onSurfaceSecondary tw-my-5 tw-text-xl tw-text-center sm:tw-text-left sm:tw-text-2xl'>
-                  {this.$t(`app_classes.${cls[0]}.description`)}
-                </h2>
-              </div>
-              <div class='tw-grid tw-gap-6 tw-grid-cols-1 sm:tw-grid-cols-2 xl:tw-grid-cols-3'>
-                {cls[1].map(([key, { label, description, thumbnail }]) => (
-                  <AppCard
-                    class={`${idx % 2 === 1 ? 'tw-bg-light-surface' : 'tw-bg-light-elevatedSurface'} tw-p-8 tw-rounded-md tw-shadow-sm hover:tw-shadow-md tw-transition tw-duration-150 tw-ease-in-out`}
-                    label={label}
-                    description={description}
-                    thumbnail={thumbnail} />
-                ))}
-              </div>
-            </section>
-          </div>
-        ))} */}
+        <section
+          class='tw-container tw-py-12'>
+          <p class='tw-text-light-onSurfaceSecondary tw-text-xl'>
+            The <b>Sales</b> app records the sales you've made to your customers. Customers could be indidviduals or institutions.
+            </p>
+          <h1 class='tw-text-light-onSurfacePrimary tw-text-4xl tw-font-black mt-6'>
+            Orders
+            </h1>
+          <p class='tw-text-light-onSurfaceSecondary tw-text-xl'>
+            You may begin a sale with a <b>Sales Order</b>. By providing all the neccessary information regarding the sales, the <b>Sales</b> app shall be apt to process it accordingly. Thus:
+            </p>
+          <ul class='mt-5 pl-5 tw-text-light-onSurfaceSecondary tw-text-xl'>
+            <li><p>Pulling the items from the shop</p></li>
+            <li class='mt-2'><p>Reserving the items until they're picked up or delivered</p></li>
+            <li class='mt-2'><p>Including bill to receivables so that you may be paid on time</p></li>
+          </ul>
+          <h1 class='tw-text-light-onSurfacePrimary tw-text-4xl tw-font-black mt-6'>
+            Invoice
+            </h1>
+          <p class='tw-text-light-onSurfaceSecondary tw-text-xl'>
+            You have various options communicating the generated invoice to your customer such as:
+          </p>
+          <ul class='mt-5 pl-5 tw-text-light-onSurfaceSecondary tw-text-xl'>
+            <li><p>Email</p></li>
+            <li class='mt-2'><p>SMS</p></li>
+            <li class='mt-2'><p>You could also print them out</p></li>
+          </ul>
+          <h1 class='tw-text-light-onSurfacePrimary tw-text-4xl tw-font-black mt-6'>
+            Reporting
+            </h1>
+          <p class='tw-text-light-onSurfaceSecondary tw-text-xl'>
+            You also have access to reports that provide insight about your sales and receivables in real time.
+            </p>
+        </section>
       </div>
     )
   },

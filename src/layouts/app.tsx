@@ -68,11 +68,11 @@ const Hero = tsx.component({
               {this.app.description}
             </h2>
             <b-button
-              class='tw-mt-4 tw-w-full tw-px-12 sm:tw-w-auto'
+              class='tw-mt-4'
+              size='is-medium'
               type='is-primary'
-              onClick={async () => {
-                alert('CTA')
-              }}>
+              tag="nuxt-link"
+              to='/sign-up'>
               {this.$t('cta')}
             </b-button>
           </div>
@@ -103,8 +103,6 @@ export default tsx.component({
         <Hero
           app={this.app} />
         <main class="tw-flex-1">
-          <error-503
-            error={comingSoon(this.$route.fullPath)} />
           <nuxt />
         </main>
         <Footer />

@@ -17,7 +17,7 @@ const Hero = tsx.component({
           </div>
           <div class='tw-flex-1'>
             <img
-              src="/vid.png"
+              src="/images/undraw_apps_m7mh.svg"
               alt=""
               class='tw-border-8 tw-border-white tw-w-full' />
           </div>

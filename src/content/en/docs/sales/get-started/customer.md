@@ -1,35 +1,50 @@
 ---
 label: Customers
-title: Organize your products in stockrooms
-description: Stockrooms are the locations where you put away your products.
+title: Manage your customers
+description: Customers are the consumers of your goods.
 position: 2
 book: get-started
 collection: sales
 ---
 
-Stockrooms are the locations where you put away your products. You should arrange your stockrooms in such a way that it reveals the order of compartments in your warehouse.
+Click on the customers menu item to be taken to the customer’s page. You can view the details about each customer on the customer's page. Customers have been categorized into two distinct groups; individuals and institutions. Individual customers have been listed under the Individuals tab whereas institutions have been listed under the institutions tab.
 
-<!-- ![Stockroom hierarchy example](/docs/inventory/get-started/sc.jpg) -->
+To view the full details of a customer, click on the edit icon attached to the specific customer. A pop up is displayed with the full details of the selected customer; You can edit the details of the customer from this pop up as well. 
 
-The Inventory app provides an initial arrangement with **Master** being the root compartment. The immediate stockrooms within the **Master** are:
+![edit customer details form](/docs/sales/get-started/edit-customer.png)
 
-- The **Backroom**, where items received are put away. All products meant for storage should be kept within this stockroom.
-- Products that are meant for sale should be kept in the **Shop**.
-- Products that should be returned to the supplier are kept in **Return**
-- Products sold but not yet received by customers shall be kept at **Delivery** or **Pickup** depending on the situation
-- Products that have gone bad should be kept at **Expired**
-- Products you've purchased but have yet to receive are kept in **Pipeline**
 
-## Create a stockroom
+## Create a customer
+Adding a new customer is straight forward. To add a new customer, click on the <button-action>New Customer button</button-action>; this displays a pop up with the customer details form. By default, the form displayed is for individual customers. To add an institution as a customer, click on the Institution tab item. 
+![new customer form](/docs/sales/get-started/add-new-customer.png)
 
-To create a stockroom, you should go to <go-to :path="['Stockrooms']"></go-to> and <button-action>New Stockroom</button-action>
 
-![Stockroom new](/docs/inventory/get-started/stockroom-new.png)
+### Add a customer as an individual
+To add a customer as an individual, follow the steps listed below:
+1. Upload a valid image to be used as the profile picture of the customer by clicking on the image icon. You can drag and drop an image from your PC or click on the Upload button to open the file explore on your PC. 
+2. Provide a valid email address for the customer.
+3. Enter the customer’s first and last names.
+4. Provide the customer’s phone number.
+5. Provide the customer’s date of birth. 
+6. Select the customer’s gender from the Gender dropdown list. 
+7. Click save to save the information or cancel to close the pop up and return to the customer's page.
+### Add a customer as an institution
+On the pop up, click on **institutions** to reveal the institutions form.
+![new customer form](/docs/sales/get-started/add-new-customer-institution.png)
+Complete the form by following the steps below:
+1. Provide the name of the institution.
+2. Provide a link the institution's website; skip this step if it doesn't apply.
+3. Select the type of ownership, i.e. Limited Liability, sole proprietorship etc.
+4. Provide the institution's phone number.
+5. Enter a valid email address for the institution.
+6. Click save to save the information or cancel to close the pop up and return to the customer's page.
 
-Enter the name of your stockroom
 
-Select an existing stockroom or New Stockroom to create yet another stockroom as the parent compartment
+## Editing the customer's details
 
-![Stockroom form](/docs/inventory/get-started/stockroom-form.png)
+To edit the information about a customer, click the edit button attached to the specific customer on the customer’s table. 
+This brings up a pop up containing the details of the selected customer. 
+![edit customer details form](/docs/sales/get-started/edit-customer.png)
+Make the necessary changes to the details and click the save button to save changes or cancel to close the pop up and return to the customer’s page. 
 
-Finally, <button-action>Save</button-action> to create the stockroom
+

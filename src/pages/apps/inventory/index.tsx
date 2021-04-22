@@ -8,29 +8,29 @@ export default tsx.component({
   render() {
     return (
       <div>
-        {/* {Object.entries(groupBy(e => e[1].class, Object.entries(this.$t('apps')))).map((cls, idx) => (
-          <div class={`${idx % 2 === 1 ? 'tw-bg-light-elevatedSurface' : ''}`}>
-            <section class='tw-container tw-py-10'>
-              <div class='tw-flex-1'>
-                <h1 class='tw-text-light-onSurfacePrimary tw-text-4xl tw-font-black tw-text-center sm:tw-text-5xl sm:tw-text-left'>
-                  {this.$t(`app_classes.${cls[0]}.label`)}
-                </h1>
-                <h2 class='tw-text-light-onSurfaceSecondary tw-my-5 tw-text-xl tw-text-center sm:tw-text-left sm:tw-text-2xl'>
-                  {this.$t(`app_classes.${cls[0]}.description`)}
-                </h2>
-              </div>
-              <div class='tw-grid tw-gap-6 tw-grid-cols-1 sm:tw-grid-cols-2 xl:tw-grid-cols-3'>
-                {cls[1].map(([key, { label, description, thumbnail }]) => (
-                  <AppCard
-                    class={`${idx % 2 === 1 ? 'tw-bg-light-surface' : 'tw-bg-light-elevatedSurface'} tw-p-8 tw-rounded-md tw-shadow-sm hover:tw-shadow-md tw-transition tw-duration-150 tw-ease-in-out`}
-                    label={label}
-                    description={description}
-                    thumbnail={thumbnail} />
-                ))}
-              </div>
-            </section>
-          </div>
-        ))} */}
+        <section
+          class='tw-container tw-py-12'>
+          <p class='tw-text-light-onSurfaceSecondary tw-text-xl'>
+            The Inventory app lets you organize and track your inventory from the time you ordered them till you sell, return or dispose of the items. You may define stockrooms where your products shall be kept.
+            </p>
+          <h1 class='tw-text-light-onSurfacePrimary tw-text-4xl tw-font-black mt-6'>
+            Tracking
+            </h1>
+          <p class='tw-text-light-onSurfaceSecondary tw-text-xl'>
+            The Inventory app orgainzes and tracks your products automatically. All you need to do is provide information about your operations using the following actions.
+            </p>
+          <ul class='mt-5 pl-5 tw-text-light-onSurfaceSecondary tw-text-xl'>
+            <li><p>The <b>Receive</b> action is used to record the receipt of products in your stockroom</p></li>
+            <li class='mt-2'><p>The <b>Pull</b> action lets you take out or pull products from your stockroom.</p></li>
+            <li class='mt-2'><p>The <b>Move</b> action is a compound action that lets you move products between two stockrooms by way of a <b>Pull</b> and <b>Receive</b> action.</p></li>
+          </ul>
+          <h1 class='tw-text-light-onSurfacePrimary tw-text-4xl tw-font-black mt-6'>
+            Reporting
+            </h1>
+          <p class='tw-text-light-onSurfaceSecondary tw-text-xl'>
+            You also have access to reports that provide insight about your inventory in real time.
+            </p>
+        </section>
       </div>
     )
   },

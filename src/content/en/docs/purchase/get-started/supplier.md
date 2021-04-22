@@ -1,35 +1,57 @@
 ---
 label: Suppliers
-title: Organize your products in stockrooms
-description: Stockrooms are the locations where you put away your products.
+title: Organize your suppliers
+description: Suppliers provide the stock/inventory required by your business to run.
 position: 2
 book: get-started
 collection: purchase
 ---
+## Who are your suppliers?
+Suppliers provide the stock/inventory required by your business to run. The suppliers for your business fall under two distinct categories:
 
-Stockrooms are the locations where you put away your products. You should arrange your stockrooms in such a way that it reveals the order of compartments in your warehouse.
+- Individuals
+- Institutions
+
+The information required for each supplier will vary depending on whether they fall under the individual or institutions category.
 
 <!-- ![Stockroom hierarchy example](/docs/inventory/get-started/sc.jpg) -->
 
-The Inventory app provides an initial arrangement with **Master** being the root compartment. The immediate stockrooms within the **Master** are:
+## Create a supplier
+To create a new supplier, click on the **NEW SUPPLIER** button
+![The supplier page](/docs/purchase/get-started/img/supplier_page.png)
 
-- The **Backroom**, where items received are put away. All products meant for storage should be kept within this stockroom.
-- Products that are meant for sale should be kept in the **Shop**.
-- Products that should be returned to the supplier are kept in **Return**
-- Products sold but not yet received by customers shall be kept at **Delivery** or **Pickup** depending on the situation
-- Products that have gone bad should be kept at **Expired**
-- Products you've purchased but have yet to receive are kept in **Pipeline**
+Clicking on the **NEW SUPPLIER** button reveals a pop up containing the supplier details form.
 
-## Create a stockroom
+### Add an individual as a supplier
+![The supplier details form](/docs/purchase/get-started/img/individual_supplier_details_form.png)
+Follow the steps below to add an individual as a supplier:
+1. Click on the profile picture icon to upload a picture of the supplier.
+1. Provide a valid email address for the supplier. 
+2. Enter the supplier’s First and Last Names. 
+3. Provide a valid phone number for the supplier.  
+4. Provide the supplier’s date of birth. 
+5. Select the supplier’s gender.
+6. Click save to submit or cancel to close the pop up. 
+Please note that all the information being asked is required. 
 
-To create a stockroom, you should go to <go-to :path="['Stockrooms']"></go-to> and <button-action>New Stockroom</button-action>
+### Add an institution as a supplier
+![The supplier details form](/docs/purchase/get-started/img/institution_supplier_details_form.png)
+To add an institution as a supplier, follow the steps below: 
+1. Click on institution on the dialogue.
+2. Click on the profile picture icon to upload a picture of the supplier.
+3. Provide the name of the institution.
+4. Provide a link to the institution’s website.
+5. Indicate the type of ownership.
+6. Provide a valid phone number for the institution.
+7. Provide a valid email address for the institution.
+8. Click save to submit the form or cancel to close the pop up. 
 
-![Stockroom new](/docs/inventory/get-started/stockroom-new.png)
+## Edit supplier details
+To edit the information about a supplier, click the **edit button** attached to the specific supplier on the supplier’s table. 
+![The supplier details form](/docs/purchase/get-started/img/edit_supplier.png)
+This brings up a pop up containing the details of the supplier. 
+Make the necessary changes to the details and click the save button to save changes. 
+![The supplier details form](/docs/purchase/get-started/img/edit_supplier_form.png)
 
-Enter the name of your stockroom
 
-Select an existing stockroom or New Stockroom to create yet another stockroom as the parent compartment
 
-![Stockroom form](/docs/inventory/get-started/stockroom-form.png)
-
-Finally, <button-action>Save</button-action> to create the stockroom

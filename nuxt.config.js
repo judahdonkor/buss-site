@@ -26,9 +26,8 @@ export default {
     ],
     bodyAttrs: {
       class: [
-        `${
-          process.env.NODE_ENV !== 'production' ? 'debug-screens' : ''
-        } font-sans text-base font-normal bg-light-surface text-light-onSurfacePrimary transition-colors duration-200 ease-in-out`,
+        `${process.env.NODE_ENV !== 'production' ? 'debug-screens' : ''
+        } tw-font-sans tw-text-base tw-font-normal tw-bg-light-surface tw-text-light-onSurfacePrimary tw-transition-colors tw-duration-200 tw-ease-in-out`,
       ],
     },
   },

@@ -7,7 +7,7 @@ const app_classes = {
   finance: {
     label: 'Finance',
     title: 'Finance',
-    description: 'Financial apps',
+    description: 'Money, investing, borrowing, lending, budgeting, saving, and forecasting',
   },
 }
 
@@ -15,7 +15,7 @@ const apps = {
   accounting: {
     label: 'Accounting',
     class: 'finance',
-    description: 'Record and monitor all your transaction here',
+    description: 'Record you financial transactions and access insightful reports',
     thumbnail: '/images/spreadsheets.svg',
     links: {
       Features: 'features',
@@ -24,7 +24,7 @@ const apps = {
   inventory: {
     label: 'Inventory',
     class: 'operations',
-    description: 'Organize and track all your goods',
+    description: 'Track and manage your inventory by way of receipts, pulls and relocations',
     thumbnail: '/images/logistics.svg',
     links: {
       Features: 'features',
@@ -33,7 +33,7 @@ const apps = {
   sales: {
     label: 'Sales',
     class: 'operations',
-    description: 'Manage sales, customers and invoices',
+    description: 'Provide goods and services to your customers and get paid on time',
     thumbnail: '/images/add_to_cart.svg',
     links: {
       Features: 'features',
@@ -42,8 +42,17 @@ const apps = {
   purchase: {
     label: 'Purchase',
     class: 'operations',
-    description: 'Manage your suppliers and purchases',
+    description: 'Purchase goods from your suppliers and pay them on time',
     thumbnail: '/images/payments.svg',
+    links: {
+      Features: 'features',
+    },
+  },
+  'human-resource-and-payroll': {
+    label: 'HR & Payroll',
+    class: 'operations',
+    description: 'Run payroll and manage your employees',
+    thumbnail: '/images/hire_re_gn5j.svg',
     links: {
       Features: 'features',
     },
@@ -132,8 +141,8 @@ module.exports = {
     },
     apps: {
       hero: {
-        slogan: 'An app for every problem',
-        description: 'Make use of an arsenal of apps as you grow',
+        slogan: 'A specialized app for a definite problem',
+        description: 'Include an app to your arsenal as your enterprise reaches new heights',
       },
     },
     docs: {
