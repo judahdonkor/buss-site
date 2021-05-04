@@ -14,7 +14,7 @@ import countries from '~/static/res/countries.json'
 type Currency = Record<'code' | 'name', string>
 
 const state = () => ({
-  appUrl: 'https://app.buss.solutions',
+  appUrl: process.env.APP_URL || '',
   bussDisc: {} as Entity,
   person: null as Entity | null,
   cl: null as Entity | null,

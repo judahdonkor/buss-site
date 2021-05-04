@@ -48,7 +48,7 @@ declare module 'vue/types/vue' {
 const Notification = tsx.component({
   data() {
     return {
-      $errors: [] as BNoticeComponent[]
+      errorBNoticeComponents: [] as BNoticeComponent[]
     }
   },
   methods: {
@@ -56,16 +56,16 @@ const Notification = tsx.component({
       this.$buefy.notification.open({
         hasIcon: true,
         type: 'is-' + state,
-        indefinite,
         message: `
                 <p class='title is-5'>${context}</p>
                 <P class='subtitle is-6'>${message}</p>
             `,
+        indefinite
       })
     },
     $notifyError(error: any) {
       if (error.message === '$cancelled') return
-      this.$errors.push(this.$buefy.notification.open({
+      this.errorBNoticeComponents.push(this.$buefy.notification.open({
         message: formatError(error),
         hasIcon: true,
         type: 'is-danger',
@@ -75,7 +75,7 @@ const Notification = tsx.component({
     },
   },
   beforeDestroy() {
-    this.$errors?.forEach(n => n.close())
+    this.errorBNoticeComponents?.forEach(n => n.close())
   }
 })
 

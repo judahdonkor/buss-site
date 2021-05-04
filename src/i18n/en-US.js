@@ -17,6 +17,7 @@ const apps = {
     class: 'finance',
     description: 'Record you financial transactions and access insightful reports',
     thumbnail: '/images/spreadsheets.svg',
+    ratePerMonth: 30,
     links: {
       Features: 'features',
     },
@@ -29,6 +30,7 @@ const apps = {
     links: {
       Features: 'features',
     },
+    ratePerMonth: 20,
   },
   sales: {
     label: 'Sales',
@@ -38,6 +40,7 @@ const apps = {
     links: {
       Features: 'features',
     },
+    ratePerMonth: 40,
   },
   purchase: {
     label: 'Purchase',
@@ -47,6 +50,7 @@ const apps = {
     links: {
       Features: 'features',
     },
+    ratePerMonth: 10,
   },
   'human-resource-and-payroll': {
     label: 'HR & Payroll',
@@ -56,6 +60,7 @@ const apps = {
     links: {
       Features: 'features',
     },
+    ratePerMonth: 90,
   },
 }
 
@@ -96,6 +101,7 @@ module.exports = {
         account: 'My Account',
         apps: 'Apps',
         docs: 'Docs',
+        pricing: 'Pricing',
         sign_in: 'Sign in',
       },
     },
@@ -179,5 +185,11 @@ module.exports = {
         ),
       },
     },
+    pricing: {
+      title: 'Buss Pricing',
+      users: 'Choose the number of Users',
+      apps: 'Choose your Apps',
+      implementation: 'Implementation Service',
+    }
   },
 }

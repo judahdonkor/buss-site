@@ -84,7 +84,7 @@ export default tsx.component({
           <section class='tw-container tw-flex tw-flex-col tw-gap-6 tw-py-16 tw-items-center md:tw-flex-row-reverse'>
             <div class='tw-flex-1'>
               <img
-                src="/vid.png"
+                src="/images/undraw_apps_m7mh.svg"
                 alt=""
                 class='tw-border-8 tw-border-white tw-w-full' />
             </div>
@@ -107,7 +107,7 @@ export default tsx.component({
           </section>
         </div>
         {/* integrate */}
-        <div class='tw-bg-light-elevatedSurface tw-py-8'>
+        {/* <div class='tw-bg-light-elevatedSurface tw-py-8'>
           <section class='tw-container tw-pt-16 tw-bg-light-surface tw-text-center'>
             <h1 class='tw-text-light-onSurfacePrimary tw-text-3xl tw-font-black sm:tw-text-5xl  tw-font-script'>
               {this.$t('pages.index.integrate.slogan')}
@@ -138,7 +138,7 @@ export default tsx.component({
               {this.$t('pages.index.integrate.exploreIntegration')}
             </b-button>
           </section>
-        </div>
+        </div> */}
       </div>
     )
   }
