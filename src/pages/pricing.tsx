@@ -83,7 +83,7 @@ const App = tsx.componentFactoryOf<{
   }
 })
 
-const ratePerUser = 89.44
+const ratePerUser = 8
 
 export default tsx.component({
   data() {

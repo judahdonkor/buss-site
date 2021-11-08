@@ -17,7 +17,7 @@ const apps = {
     class: 'finance',
     description: 'Record you financial transactions and access insightful reports',
     thumbnail: '/images/spreadsheets.svg',
-    ratePerMonth: 30,
+    ratePerMonth: 8,
     links: {
       Features: 'features',
     },
@@ -30,7 +30,7 @@ const apps = {
     links: {
       Features: 'features',
     },
-    ratePerMonth: 20,
+    ratePerMonth: 12,
   },
   sales: {
     label: 'Sales',
@@ -40,7 +40,7 @@ const apps = {
     links: {
       Features: 'features',
     },
-    ratePerMonth: 40,
+    ratePerMonth: 14,
   },
   purchase: {
     label: 'Purchase',
@@ -50,7 +50,7 @@ const apps = {
     links: {
       Features: 'features',
     },
-    ratePerMonth: 10,
+    ratePerMonth: 6,
   },
   'human-resource-and-payroll': {
     label: 'HR & Payroll',
@@ -60,7 +60,7 @@ const apps = {
     links: {
       Features: 'features',
     },
-    ratePerMonth: 90,
+    ratePerMonth: 8,
   },
 }
 
