@@ -8,9 +8,9 @@ export default tsx.component({
     }
   },
   mounted() {
-    setTimeout(() => {
-      this.setNextImageIndex()
-    }, 5000)
+    // setTimeout(() => {
+    //   this.setNextImageIndex()
+    // }, 5000)
   },
   methods: {
     setNextImageIndex() {
