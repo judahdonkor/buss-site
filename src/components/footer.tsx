@@ -1,6 +1,7 @@
 import Wordmark from '@/assets/logo/wordmark.svg?inline'
 import Icon from '@/assets/logo/icon.svg?inline'
 import * as tsx from 'vue-tsx-support'
+import Subscribe from './Subscribe.vue'
 import { IconEnvelopeSolid, IconFacebookBrands, IconGithubBrands, IconInstagramBrands, IconLinkedinBrands, IconTwitterBrands, IconYoutubeBrands } from '~/components/icons'
 
 const Menu = tsx.component({
@@ -12,6 +13,9 @@ const Menu = tsx.component({
         items: {
             type: Array as () => [string, string][],
             required: true
+        },
+        subtitle: {
+            type: String
         }
     },
     render() {
@@ -34,6 +38,8 @@ const Menu = tsx.component({
 })
 
 const Footer = tsx.component({
+
+    
     render() {
         return (
             <footer
@@ -86,8 +92,14 @@ const Footer = tsx.component({
                                     // ['Blog', '/'],
                                     // ['Partners', '/']
                                 ]} />
+
+
                         </div>
                     </div>
+                   
+                            <Subscribe />
+                  
+
                     <div
                         class='tw-flex tw-flex-col tw-gap-12 lg:tw-flex-row tw-justify-between tw-text-dark-onSurfaceSecondary tw-pt-12 tw-text-xs'>
                         <div
@@ -118,7 +130,7 @@ const Footer = tsx.component({
                     </div>
                     <div
                         class='tw-flex tw-justify-between tw-text-dark-onSurfaceSecondary tw-pt-12 tw-text-xs'>
-                        <span>© 2020 Buss</span>
+                        <span>© {new Date().getFullYear()} Buss</span>
                         <div
                             class='tw-flex tw-justify-between tw-gap-6'>
                             <nuxt-link
