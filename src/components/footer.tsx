@@ -1,7 +1,8 @@
 import Wordmark from '@/assets/logo/wordmark.svg?inline'
 import Icon from '@/assets/logo/icon.svg?inline'
 import * as tsx from 'vue-tsx-support'
-import Subscribe from './Subscribe.vue'
+import { Subscribe } from './Subscribe'
+
 import { IconEnvelopeSolid, IconFacebookBrands, IconGithubBrands, IconInstagramBrands, IconLinkedinBrands, IconTwitterBrands, IconYoutubeBrands } from '~/components/icons'
 
 const Menu = tsx.component({
@@ -88,7 +89,7 @@ const Footer = tsx.component({
                                 title='Buss'
                                 items={[
                                     ['About us', '#0'],
-                                    ['Contact us', '#0'],
+                                    ['Contact us', '/contact'],
                                     // ['Blog', '/'],
                                     // ['Partners', '/']
                                 ]} />
@@ -97,8 +98,8 @@ const Footer = tsx.component({
                         </div>
                     </div>
                    
-                            <Subscribe />
-                  
+                        <Subscribe />
+                
 
                     <div
                         class='tw-flex tw-flex-col tw-gap-12 lg:tw-flex-row tw-justify-between tw-text-dark-onSurfaceSecondary tw-pt-12 tw-text-xs'>
