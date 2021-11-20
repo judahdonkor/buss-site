@@ -46,7 +46,7 @@ const Navbar = tsx.component({
                             <nuxt-link
                                 class='tw-flex tw-items-center tw-text-light-onSurfacePrimary hover:tw-text-cornflower-blue tw-transition tw-duration-150 tw-ease-in-out'
                                 to='/'>
-                                <Abstract class='tw-h-8 tw-w-auto' />
+                                <Abstract class='tw-h-8 tw-w-auto mr-2' />
                                 <div class='sm:tw-hidden md:tw-block' style={{
                                     'tw-flex-basis': '0.4rem'
                                 }} />

@@ -1,5 +1,5 @@
 import * as tsx from 'vue-tsx-support'
-import { IconEnvelopeSolid} from '~/components/icons'
+
 
 
 const SubscribeView = tsx.component({
@@ -23,30 +23,30 @@ const SubscribeView = tsx.component({
         },
  
     },
-    methods:{
+    // methods:{
 
-        handleSubscribe(e:any):void{
-                e.preventDefault()
+    //     handleSubscribe(e:any):void{
+    //             e.preventDefault()
 
-               const value =document.querySelector('.input') as HTMLInputElement
+    //            const value =document.querySelector('.input') as HTMLInputElement
 
-               if(value.value !==''){
+    //            if(value.value !==''){
 
-                alert('Thank you for subscribing with us.')
+    //             alert('Thank you for subscribing with us.')
 
-                value.value =""
-
-               
-               }
+    //             value.value =""
 
                
+    //            }
+
+               
 
 
-        }
-    },
+    //     }
+    // },
 
     render(){
-        return(<div class ='has-text-centered-mobile hast-text-centered-tablet'>
+        return(<div class ='has-text-centered-mobile hast-text-centered-tablet pt-5'>
             <div>
                 <div class="block">
                     <h3 class ='tw-w-full tw-text-dark-onSurfacePrimary tw-text-2xl tw-font-medium tw-text-center md:tw-text-left'>
@@ -56,17 +56,19 @@ const SubscribeView = tsx.component({
                         {this.subtitle}
                     </h4>
                 </div>
+                <form class ='form' onSubmit ={()=>alert('CTA')}>
                 <div class="field is-flex has-text-centered-mobile has-text-centered-tablet">
-                    <div class="control mr-3 ">
-                        <input type="email" required class="input is-fullwidth is-medium is-focused" placeholder ={this.placeholder}/>
-                        
+                    <div class="control mr-3 has-icons-left">
+                        <input type="email" required class="input is-fullwidth is-medium" placeholder ={this.placeholder}/>
+                        <span class ='icon is-small is-left'> <i class ='fas fa-envelope'></i></span>
                     </div>
                     <div class="control">
-                        <button class="button is-medium is-link" onClick ={this.handleSubscribe}>
+                        <button class="button is-medium is-link">
                             {this.buttonText}
                         </button>
                     </div>
                 </div>
+                </form>
 
             </div>
         </div>)
