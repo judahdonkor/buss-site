@@ -1,6 +1,5 @@
 import * as tsx from 'vue-tsx-support'
-import undraw_contact_us_15o2  from '@/assets/illustration/undraw_contact_us_15o2.svg'
-import { Data } from './Data'
+import Illustration from '@/assets/illustration/undraw_contact_us_15o2.svg?inline'
 
 
 
@@ -10,15 +9,10 @@ export default tsx.component({
         return (
             <section class=''>
             <div class='tw-container'>
-
             <div class="hero">
                 <div class="hero-body">
-                    <div class="columns is-gapless">
-                        <div class="column">
-                            <div class="image">
-                                <img src={undraw_contact_us_15o2} alt="hero image"  style ="height:300px" />
-                            </div>
-                        </div>
+                            <div class="columns is-vcentered">
+                                <Illustration class='column' />
                         <div class="column">
                             <h1 class='title is-size-1-desktop  is-size-1-tablet is-size-2-mobile has-text-weight-bold'>We get to know you, your company and your people.</h1>
                         </div>
