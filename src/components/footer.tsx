@@ -89,7 +89,7 @@ const Footer = tsx.component({
                                 title='Buss'
                                 items={[
                                     ['About us', '#0'],
-                                    ['Contact us', '/contact'],
+                                    ['Contact us', '/contact-us'],
                                     // ['Blog', '/'],
                                     // ['Partners', '/']
                                 ]} />
