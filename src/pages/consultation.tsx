@@ -70,7 +70,7 @@ export const Data_list = {
 
 
 
-const content = tsx.component({
+const Content = tsx.component({
     props: {
         heading: {
             type: String,
@@ -113,11 +113,11 @@ export default tsx.component({
 
         return (
             <div class='container p-6 '>
-                <content
+                <Content
                     heading={Data_list.m_heading}
                     sub_heading={Data_list.s_heading}
                 />
-
+                <div class='tw-overflow-scroll'>
                 <table class=' table is-striped p-6 has-text-centered is-borederd '>
                     <thead>
                         <tr>
@@ -307,6 +307,7 @@ export default tsx.component({
 
 
                 </table>
+                </div>
             </div>)
     }
 })
