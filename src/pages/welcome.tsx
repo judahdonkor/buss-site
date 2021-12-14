@@ -23,7 +23,7 @@ export default tsx.component({
             size='is-medium'
             type='is-primary'
             tag='a'
-            href={`${this.$accessor.appUrl}/sign-in?email=${String(this.$route.query.email || '')}&otp`}
+            href={`/sign-in?email=${String(this.$route.query.email || '')}&otp`}
             target='_blank'
             onClick={() => this.$router.push('/')}>
             Continue to Buss

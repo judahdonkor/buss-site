@@ -41,7 +41,7 @@ export default tsx.component({
             state: 'info',
             confirmText: 'Yes, help me sign in'
           })
-            .then(() => window.open(`${this.$accessor.appUrl}/sign-in?email=${String(this.$route.query.email || '')}&otp`, '_blank'))
+            .then(() => window.open(`/sign-in?email=${String(this.person.email || '')}&otp`, '_blank'))
             .catch(error => this.$router.push('/'))
         } else {
           client = await this.$chassis.repos.merge(mdlClient, {
