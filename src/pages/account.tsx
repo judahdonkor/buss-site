@@ -59,7 +59,10 @@ export default tsx.component({
             </h2>
             <div class='tw-py-8 tw-grid tw-gap-4 tw-grid-cols-1 sm:tw-grid-cols-2 xl:tw-grid-cols-3'>
               {this.discs.map(({ id, name, thumbnail }: Entity) => (
-                <nuxt-link to={`/database/${id}`}>
+                <a 
+                href={`${this.$accessor.appUrl}/${id}`}
+                target='_blank'
+                >
                   <Card
                     class='has-text-centered cursor-pointer'>
                     <img
@@ -67,7 +70,7 @@ export default tsx.component({
                       src={thumbnail || '/images/collecting.svg'} />
                     <p class='title is-5'>{name}</p>
                   </Card>
-                </nuxt-link>
+                </a>
               ))}
               <Card
                 class='has-text-centered cursor-pointer'
@@ -80,11 +83,12 @@ export default tsx.component({
                     })
                     await this.$axios.$get(`/con/init/${disc.id}`)
                     this.$accessor.discs.push(disc)
-                    this.$notify({
+                    this.$confirm({
                       context: 'Added database',
-                      message: `Added ${disc.display}.`,
-                      state: 'success'
-                    })
+                      message: `Added ${disc.display} successfully. Would you like use this database?`,
+                      state: 'info',
+                      confirmText: 'Yes, take me there'
+                    }).then(() => window.open(`${this.$accessor.appUrl}/${disc.id}`, '_blank'))
                   } catch (error) {
                     this.$notifyError(error)
                   }

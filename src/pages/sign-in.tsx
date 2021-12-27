@@ -13,7 +13,7 @@ export default tsx.componentFactory.create({
       password: '',
       returnPath: '/account',
       otp: false,
-      loading: false
+      loading: ''
     }
   },
   async mounted() {
@@ -31,7 +31,7 @@ export default tsx.componentFactory.create({
         this.sendToken()
     },
     async signIn() {
-      this.loading = true
+      this.loading = 'Creating your session'
       try {
         await this.$accessor.setup(
           await this.$chassis.xchg.signIn({
@@ -52,9 +52,10 @@ export default tsx.componentFactory.create({
       } catch (error) {
         this.$notifyError(error)
       }
-      this.loading = false
+      this.loading = ''
     },
     async sendToken() {
+      this.loading = 'Creating your secure token'
       try {
         this.$notify({
           context: 'Sign in',
@@ -65,6 +66,7 @@ export default tsx.componentFactory.create({
       } catch (error) {
         this.$notifyError(error)
       }
+      this.loading = ''
     },
   },
   render() {
@@ -77,8 +79,8 @@ export default tsx.componentFactory.create({
         }}>
         <Card>
           <Loading
-            active={this.loading}
-            message='Creating your session' />
+            active={!!this.loading}
+            message={this.loading} />
           <validation-observer
             slim
             scopedSlots={{
