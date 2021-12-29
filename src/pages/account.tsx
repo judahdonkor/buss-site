@@ -2,7 +2,9 @@ import Collecting from '@/assets/illustration/collecting.svg?inline'
 import { Entity } from '@judahdonkor/chassis-client-es/types/repository'
 import * as tsx from 'vue-tsx-support'
 import { Card } from '~/components'
+import { Billing } from '~/components/billing'
 import { merge as mergeDiscriminator } from '~/discriminator'
+
 
 export default tsx.component({
   render() {
@@ -36,6 +38,8 @@ export default tsx.component({
                   </p> */}
               </div>
             </div>
+
+          
             {/* <div
               class='tw-text-center'>
               <nuxt-link
@@ -45,8 +49,13 @@ export default tsx.component({
 
             </div> */}
           </section>
+
         </div>
+
+       <Billing />
         {/* discriminators */}
+
+
         <div class=''>
           <section class='tw-container tw-py-16'>
             <h1 class='tw-text-light-onSurfacePrimary tw-text-3xl tw-font-black sm:tw-text-5xl '>
@@ -59,9 +68,9 @@ export default tsx.component({
             </h2>
             <div class='tw-py-8 tw-grid tw-gap-4 tw-grid-cols-1 sm:tw-grid-cols-2 xl:tw-grid-cols-3'>
               {this.discs.map(({ id, name, thumbnail }: Entity) => (
-                <a 
-                href={`${this.$accessor.appUrl}/${id}`}
-                target='_blank'
+                <a
+                  href={`${this.$accessor.appUrl}/${id}`}
+                  target='_blank'
                 >
                   <Card
                     class='has-text-centered cursor-pointer'>
@@ -103,5 +112,7 @@ export default tsx.component({
       </div>
     )
   },
+
+  
 })
 
