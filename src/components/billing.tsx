@@ -1,6 +1,13 @@
 import * as tsx from 'vue-tsx-support'
+import { merge } from '@/commitment'
 
 export const Billing = tsx.component({
+  props: {
+    value: {
+      type: Number,
+      default: 5
+    }
+  },
   data() {
     return {
       databaseDummy: [
@@ -21,44 +28,55 @@ export const Billing = tsx.component({
         { title: 'Proccessing' },
         { title: 'Explanation' }
 
-      ]
+      ],
+      rows: [5, 10, 15, 20, 25, 50, 100, 500, 1000, 5000, 0]
     }
   },
   render() {
     return (
       <section class="tw-container box mt-5 tw-overflow-scroll">
-        <h2 class="title is-size-2 p-4"> Billing</h2>
         <div class="is-flex is-justify-content-space-between p-4">
-          <div class="control is-flex  p-3">
-            <b-radio name="settled" native-value="settled" class="is-medium mr-3">
-              Settled
-            </b-radio>
-            <b-radio name="outstanding" native-value="outstanding" class="is-medium">
-              Outstanding
-            </b-radio>
+          <h2 class="title is-sizee-2 ">Billing</h2>
+          <b-button
+            class="is-medium"
+            onClick={() => merge({
+              ctx: this,
+              client: this.cl!,
+              fullScreen: true
+            })}
+          >
+            <i class="fa fa-handshake mr-2 is-medium"></i>
+            Commitment
+          </b-button>
+        </div>
+        <div class="control is-flex  p-3 pb-5">
+          <b-radio-button name="settled" native-value="settled" class="is-medium">
+            Settled
+          </b-radio-button>
+          <b-radio-button name="outstanding" native-value="outstanding" class="is-medium">
+            Outstanding
+          </b-radio-button>
+        </div>
+        <div class="is-flex is-justify-content-space-between p-4">
+          <div>
+            <b-field label="Rows: " horizontal>
+              <b-select
+                value={this.value}
+                onInput={(val: number) => this.$emit('input', val)}
+              >
+                {this.rows.map(r => (
+                  <option value={r}>{r === 0 ? 'All' : r}</option>
+                ))}
+              </b-select>
+            </b-field>
           </div>
           <div class="pagination">
-            <nav class="pagination is-right" role="navigation" aria-label="pagination">
-              <ul class="pagination-list">
-                <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
-                <li><a class="pagination-link" aria-label="Goto page 2">2</a></li>
-                <li><span class="pagination-ellipsis">&hellip;</span></li>
-                <li><a class="pagination-link" aria-label="Page 5" aria-current="page">5</a></li>
-                <li><a class="pagination-link is-current" aria-label="Goto page 86">{this.databaseDummy.length}</a></li>
-              </ul>
-              <a class="pagination-previous"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-              <a class="pagination-next"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </nav>
+            <b-pagination class="is-medium"></b-pagination>
           </div>
         </div>
-        <b-field label="Row" class="pl-4 pb-4">
-          <b-select placeholder="Select a row">
-            <option value="5">5 per page</option>
-            <option value="10">10 per page</option>
-            <option value="15">15 per page</option>
-            <option value="20">20 per page</option>
-          </b-select>
-        </b-field>
+
+
+
 
         <table class='table is-fullwidth has-text-centered'>
           <tr>
@@ -84,27 +102,19 @@ export const Billing = tsx.component({
 
         </table>
         <div class="is-flex is-justify-content-space-between p-4">
-          <b-field label="Row" class="pl-4">
-            <b-select placeholder="Select a row">
-              <option value="5">5 per page</option>
-              <option value="10">10 per page</option>
-              <option value="15">15 per page</option>
-              <option value="20">20 per page</option>
+          <b-field label="Rows: " horizontal>
+            <b-select
+              value={this.value}
+              onInput={(val: number) => this.$emit('input', val)}
+            >
+              {this.rows.map(r => (
+                <option value={r}>{r === 0 ? 'All' : r}</option>
+              ))}
             </b-select>
           </b-field>
 
           <div class="pagination">
-            <nav class="pagination is-right" role="navigation" aria-label="pagination">
-              <ul class="pagination-list">
-                <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
-                <li><a class="pagination-link" aria-label="Goto page 2">2</a></li>
-                <li><span class="pagination-ellipsis">&hellip;</span></li>
-                <li><a class="pagination-link" aria-label="Page 5" aria-current="page">5</a></li>
-                <li><a class="pagination-link is-current" aria-label="Goto page 86">{this.databaseDummy.length}</a></li>
-              </ul>
-              <a class="pagination-previous"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-              <a class="pagination-next"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </nav>
+            <b-pagination class="is-medium"></b-pagination>
           </div>
         </div>
 
