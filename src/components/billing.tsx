@@ -1,6 +1,8 @@
 import * as tsx from 'vue-tsx-support'
 import { merge } from '@/commitment'
 
+
+
 export const Billing = tsx.component({
   props: {
     value: {
@@ -10,6 +12,7 @@ export const Billing = tsx.component({
   },
   data() {
     return {
+      tryTest: [],
       databaseDummy: [
         { id: 101, date: 'Aug 21,2021', customer: 'Shadrack mensah', Account: 'Cash', billDue: 'Aug 21,2021', processing: 'fetch for customer', explanation: 'Clean up  -Stock sold-final Batch(21-Aug-2021' },
         { id: 102, date: 'Aug 21,2021', customer: 'Shadrack mensah', Account: 'Cash', billDue: 'Aug 21,2021', processing: 'fetch for customer', explanation: 'Clean up  -Stock sold-final Batch(21-Aug-2021' },
@@ -84,6 +87,7 @@ export const Billing = tsx.component({
               this.tableHeadings.map(item => <th>{item.title}</th>)
             }
           </tr>
+
           {
             this.databaseDummy.map(item => (
               <tr>
@@ -97,6 +101,7 @@ export const Billing = tsx.component({
                 <td><button class='button'>Deactivate</button></td>
                 <td><button class='button'>Invoice</button></td>
               </tr>
+
             ))
           }
 
@@ -118,6 +123,8 @@ export const Billing = tsx.component({
           </div>
         </div>
 
+        <p>
+        </p>
       </section>
     )
   }

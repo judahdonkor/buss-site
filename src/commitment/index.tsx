@@ -1,8 +1,9 @@
 import { Entity } from '@judahdonkor/chassis-client-es/types/repository'
+import { options } from 'numeral'
 import * as tsx from 'vue-tsx-support'
 import { Level, openForm } from '~/components'
 
-const mdl = 'org.judahdonkor.buss.Discriminator'
+const mdl = 'org.judahdonkor.buss.Commitment'
 const db = [
   { id: 101, title: 'Acounting' },
   { id: 102, title: 'Sales' },
@@ -10,12 +11,7 @@ const db = [
   { id: 104, title: 'HR & Payroll' },
   { id: 105, title: 'Finance' }
 ]
-const monthOptions = [
-  { id: 1, numberOfMonths: '3 months' },
-  { id: 1, numberOfMonths: '6 months' },
-  { id: 1, numberOfMonths: '9 months' },
-  { id: 1, numberOfMonths: 'year' }
-]
+const monthOptions = [3, 6, 9, 12]
 const Discriminator = tsx
   .componentFactoryOf<{ onInput: (country: Entity) => void }>()
   .create({
@@ -24,6 +20,12 @@ const Discriminator = tsx
         type: Object as () => Entity,
         default: () => ({} as Entity),
       },
+
+    },
+    data() {
+      return {
+        inputValue: ""
+      }
     },
     render() {
       return (
@@ -47,17 +49,25 @@ const Discriminator = tsx
             <b-field label="Select Database" class="p-4">
               <b-select placeholder="Select a Database">
                 {
-                  db.map(item => <option  value={item.id} onChange={(e)=>e.target.value}>{item.title}</option>)
+                  db.map(item => <option value={item.id} onChange={(e) => e.target.value}>{item.title}</option>)
                 }
               </b-select>
             </b-field>
             <b-field label="Select Period" class="p-4">
               <b-select placeholder="Select a month">
                 {
-                  monthOptions.map(item => <option value={item.id} onChange={(e)=>e.target.value}>{item.numberOfMonths}</option>)
+                  monthOptions.map(item => (<option value={item} onChange={(e) => e.target.value}>{item === 0 ? 3 : item}</option>))
                 }
               </b-select>
             </b-field>
+            <b-field label="Enter Amount" class="p-4" style={{ width: "300px" }}>
+              <b-input
+                type='number'
+                value={this.inputValue}
+                onInput={(val: number) => this.$emit('input', val)}
+              ></b-input>
+            </b-field>
+
           </div>
           {/* </section> */}
         </div >
