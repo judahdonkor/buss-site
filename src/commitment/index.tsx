@@ -1,7 +1,8 @@
 import { Entity } from '@judahdonkor/chassis-client-es/types/repository'
 import { options } from 'numeral'
+import { assoc } from 'ramda'
 import * as tsx from 'vue-tsx-support'
-import { Level, openForm } from '~/components'
+import { Input, Level, openForm } from '~/components'
 
 const mdl = 'org.judahdonkor.buss.Commitment'
 
@@ -62,7 +63,17 @@ const Discriminator = tsx
                 onInput={(val: number) => this.$emit('input', val)}
               ></b-input>
             </b-field>
-
+            <Input
+              label="Enter Amount"
+              cleaveOptions={{
+                numeral: true,
+                numeralPositiveOnly: true,
+              }}
+              value={String(this.value.amount || '')}
+              onInput={val =>
+                this.$emit('input', assoc('amount', Number(val), this.value))
+              }
+            />
           </div>
           {/* </section> */}
         </div >
