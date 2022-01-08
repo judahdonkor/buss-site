@@ -22,16 +22,7 @@ export const Billing = tsx.component({
         { id: 106, date: 'Aug 21,2021', customer: 'Shadrack mensah', Account: 'Cash', billDue: 'Aug 21,2021', processing: 'fetch for customer', explanation: 'Clean up  -Stock sold-final Batch(21-Aug-2021' },
 
       ],
-      tableHeadings: [
-        { title: 'ID' },
-        { title: 'Date' },
-        { title: 'Customer' },
-        { title: 'Account' },
-        { title: 'Bill due on' },
-        { title: 'Proccessing' },
-        { title: 'Explanation' }
-
-      ],
+      tableHeadings: ['ID', 'Date', 'Customer', 'Account', 'Bill due on', 'Proccessing', 'Explanation'],
       rows: [5, 10, 15, 20, 25, 50, 100, 500, 1000, 5000, 0]
     }
   },
@@ -77,18 +68,15 @@ export const Billing = tsx.component({
             <b-pagination class="is-medium"></b-pagination>
           </div>
         </div>
-
-
-
-
         <table class='table is-fullwidth has-text-centered'>
           <tr>
             {
-              this.tableHeadings.map(item => <th>{item.title}</th>)
+              this.tableHeadings.map(item => <th>{item}</th>)
             }
           </tr>
 
           {
+
             this.databaseDummy.map(item => (
               <tr>
                 <td >{item.id}</td>
@@ -122,9 +110,6 @@ export const Billing = tsx.component({
             <b-pagination class="is-medium"></b-pagination>
           </div>
         </div>
-
-        <p>
-        </p>
       </section>
     )
   }
