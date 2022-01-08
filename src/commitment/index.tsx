@@ -4,13 +4,8 @@ import * as tsx from 'vue-tsx-support'
 import { Level, openForm } from '~/components'
 
 const mdl = 'org.judahdonkor.buss.Commitment'
-const db = [
-  { id: 101, title: 'Acounting' },
-  { id: 102, title: 'Sales' },
-  { id: 103, title: 'Inventory' },
-  { id: 104, title: 'HR & Payroll' },
-  { id: 105, title: 'Finance' }
-]
+
+const db = ['Acounting','Sales','Inventory','HR & Payroll','Finance']
 const monthOptions = [3, 6, 9, 12]
 const Discriminator = tsx
   .componentFactoryOf<{ onInput: (country: Entity) => void }>()
@@ -49,7 +44,7 @@ const Discriminator = tsx
             <b-field label="Select Database" class="p-4">
               <b-select placeholder="Select a Database">
                 {
-                  db.map(item => <option value={item.id} onChange={(e) => e.target.value}>{item.title}</option>)
+                  db.map(item => <option value={item} onChange={(e) => e.target.value}>{item}</option>)
                 }
               </b-select>
             </b-field>

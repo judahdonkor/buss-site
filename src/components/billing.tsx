@@ -1,18 +1,14 @@
 import * as tsx from 'vue-tsx-support'
 import { merge } from '@/commitment'
+import { required } from 'vee-validate/dist/rules'
 
 
 
 export const Billing = tsx.component({
-  props: {
-    value: {
-      type: Number,
-      default: 5
-    }
-  },
   data() {
     return {
-      tryTest: [],
+      value: "" as String,
+
       databaseDummy: [
         { id: 101, date: 'Aug 21,2021', customer: 'Shadrack mensah', Account: 'Cash', billDue: 'Aug 21,2021', processing: 'fetch for customer', explanation: 'Clean up  -Stock sold-final Batch(21-Aug-2021' },
         { id: 102, date: 'Aug 21,2021', customer: 'Shadrack mensah', Account: 'Cash', billDue: 'Aug 21,2021', processing: 'fetch for customer', explanation: 'Clean up  -Stock sold-final Batch(21-Aug-2021' },
@@ -74,22 +70,19 @@ export const Billing = tsx.component({
               this.tableHeadings.map(item => <th>{item}</th>)
             }
           </tr>
-
           {
-
             this.databaseDummy.map(item => (
               <tr>
-                <td >{item.id}</td>
-                <td >{item.date}</td>
-                <td >{item.customer}</td>
-                <td >{item.Account}</td>
-                <td>{item.billDue}</td>
-                <td >{item.processing}</td>
-                <td >{item.explanation}</td>
-                <td><button class='button'>Deactivate</button></td>
-                <td><button class='button'>Invoice</button></td>
-              </tr>
-
+              <td >{item.id}</td>
+              <td >{item.date}</td>
+              <td >{item.customer}</td>
+              <td >{item.Account}</td>
+              <td>{item.billDue}</td>
+              <td >{item.processing}</td>
+              <td >{item.explanation}</td>
+              <td><button class='button'>Deactivate</button></td>
+              <td><button class='button'>Invoice</button></td>
+            </tr>
             ))
           }
 
@@ -98,7 +91,7 @@ export const Billing = tsx.component({
           <b-field label="Rows: " horizontal>
             <b-select
               value={this.value}
-              onInput={(val: number) => this.$emit('input', val)}
+              onInput={(val: String) => this.$emit('input', val)}
             >
               {this.rows.map(r => (
                 <option value={r}>{r === 0 ? 'All' : r}</option>
