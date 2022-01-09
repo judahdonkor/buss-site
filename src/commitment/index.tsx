@@ -49,18 +49,22 @@ const Discriminator = tsx
                   />
                 </figure> */}
             </Level>
-            <ValidatedField label='Select Period' rules='required' >
+            <ValidatedField label='Select Period' 
+            // rules="required"
+            >
               <SuggestedInput
                 options={monthOptions}
-                value={this.value.periodInmonth && String(this.value.periodInmonth)}
-                onInput={val => this.$emit(
-                  'input',
-                  assoc(
-                    'periodInMonth',
-                    Number(val),
-                    this.value
+                value={this.value.periodInmonth}
+                onInput={val => {
+                  this.$emit(
+                    'input',
+                    assoc(
+                      'periodInMonth',
+                      Number(val),
+                      this.value
+                    )
                   )
-                )} />
+                }} />
             </ValidatedField>
             <ValidatedField
               label='Select Database' >
