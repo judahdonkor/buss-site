@@ -90,29 +90,29 @@ const Discriminator = tsx
 interface Params {
   ctx: Vue
   client: Entity
-  discriminator?: Entity
+  commitment?: Entity
   fullScreen?: boolean
 }
 
 const merge = ({
   ctx,
   client,
-  discriminator,
+  commitment = {},
   fullScreen
 }: Params) =>
   openForm<Entity>(ctx, {
     fullScreen,
-    loadingMessage: discriminator
-      ? 'Updating ' + discriminator.display
+    loadingMessage: commitment
+      ? 'Updating ' + commitment.display
       : 'creating your commitment',
     component: Discriminator,
-    title: discriminator
-      ? 'Update ' + discriminator.display
+    title: commitment
+      ? 'Update ' + commitment.display
       : 'Create Commitment',
-    submitButtonLabel: discriminator
+    submitButtonLabel: commitment
       ? 'Save'
       : 'Submit',
-    value: discriminator,
+    value: commitment,
     persist: async (val) => {
       alert(JSON.stringify(val))
       // ctx.$chassis.repos.merge(
