@@ -1,8 +1,9 @@
 import { Entity } from '@judahdonkor/chassis-client-es/types/repository'
+import { Database } from '@nuxt/content'
 import { options } from 'numeral'
 import { assoc } from 'ramda'
 import * as tsx from 'vue-tsx-support'
-import { Input, Level, openForm } from '~/components'
+import { Input, Level, openForm, ValidatedField, SuggestedInput } from '~/components'
 
 const mdl = 'org.judahdonkor.buss.Commitment'
 
@@ -38,43 +39,28 @@ const Discriminator = tsx
                   />
                 </figure> */}
             </Level>
-            <b-field label ="Select Database">
-            <b-select
-              placeholder="Select Database"
-              rules='required'
-              value={this.value.discriminator}
-              onInput={(val: String) => this.$emit('input', assoc("discriminator", Number(val), this.value))}
-            >
-              {
-                db.map(data =>
-                (<option
-                  value={data}
-                >{data}</option>))
-              }
-            </b-select>
-            </b-field>
-            <b-field label="Select Period">
-            <b-select
-              placeholder="Select Period"
-              rules='required'
-              value={this.value.periodInMonth}
-              onInput={(val: String) => this.$emit('input', assoc("periodInMonth", Number(val), this.value))}
-            >
-              {
-                monthOptions.map(mon =>
-                (<option
-                  value={mon}
-                >{mon}</option>))
-              }
-            </b-select>
-            </b-field>
-            {/* <b-field label="Enter Amount" class="p-4" style={{ width: "300px" }}>
-              <b-input
-                type='number'
-                value={this.inputValue}
-                onInput={(val: number) => this.$emit('input', val)}
-              ></b-input>
-            </b-field> */}
+
+
+
+            <ValidatedField label='Select Database' rules='required' >
+              <SuggestedInput
+                options={db.map(data => ({
+                  display: data.discriminator,
+                  value: data.discriminator
+                }))}
+                value={this.value.descriminato}
+                onInput={val => this.$emit('input', assoc('discriminator', val, this.value))} />
+            </ValidatedField>
+            <ValidatedField label='Select Period' rules='required' >
+              <SuggestedInput
+                options={monthOptions.map(period => ({
+                  display: period.periodInMonth,
+                  value: period.periodInMonth
+                }))}
+                value={this.value.periodInmonth}
+                onInput={val => this.$emit('input', assoc('periodInMonth', val, this.value))} />
+            </ValidatedField>
+
             <Input
               label="Enter Amount"
               cleaveOptions={{
