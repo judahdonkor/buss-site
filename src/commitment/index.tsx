@@ -97,7 +97,7 @@ interface Params {
 const merge = ({
   ctx,
   client,
-  commitment = {},
+  commitment,
   fullScreen
 }: Params) =>
   openForm<Entity>(ctx, {
