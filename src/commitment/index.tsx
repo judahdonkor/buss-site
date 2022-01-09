@@ -3,12 +3,22 @@ import { Database } from '@nuxt/content'
 import { options } from 'numeral'
 import { assoc } from 'ramda'
 import * as tsx from 'vue-tsx-support'
-import { Input, Level, openForm, ValidatedField, SuggestedInput } from '~/components'
+import { mdl as mdlDiscriminator } from '~/discriminator'
+import { Input, Level, openForm, ValidatedField, SuggestedInput, SuggestedInputOption, SelectEntity } from '~/components'
 
 const mdl = 'org.judahdonkor.buss.Commitment'
 
 const db = ['Acounting', 'Sales', 'Inventory', 'HR & Payroll', 'Finance']
-const monthOptions = [3, 6, 9, 12]
+const monthOptions: SuggestedInputOption[] = [
+  {
+    value: '3',
+    display: '3 months'
+  },
+  {
+    value: '12',
+    display: '1 year'
+  }
+]
 const Discriminator = tsx
   .componentFactoryOf<{ onInput: (country: Entity) => void }>()
   .create({
@@ -39,28 +49,26 @@ const Discriminator = tsx
                   />
                 </figure> */}
             </Level>
-
-
-
-            <ValidatedField label='Select Database' rules='required' >
-              <SuggestedInput
-                options={db.map(data => ({
-                  display: data.discriminator,
-                  value: data.discriminator
-                }))}
-                value={this.value.descriminato}
-                onInput={val => this.$emit('input', assoc('discriminator', val, this.value))} />
-            </ValidatedField>
             <ValidatedField label='Select Period' rules='required' >
               <SuggestedInput
-                options={monthOptions.map(period => ({
-                  display: period.periodInMonth,
-                  value: period.periodInMonth
-                }))}
-                value={this.value.periodInmonth}
-                onInput={val => this.$emit('input', assoc('periodInMonth', val, this.value))} />
+                options={monthOptions}
+                value={this.value.periodInmonth && String(this.value.periodInmonth)}
+                onInput={val => this.$emit(
+                  'input',
+                  assoc(
+                    'periodInMonth',
+                    Number(val),
+                    this.value
+                  )
+                )} />
             </ValidatedField>
-
+            <ValidatedField
+              label='Select Database' >
+              <SelectEntity
+                mdl={mdlDiscriminator}
+                value={this.value.descriminator}
+                onInput={val => this.$emit('input', assoc('discriminator', val, this.value))} />
+            </ValidatedField>
             <Input
               label="Enter Amount"
               cleaveOptions={{
@@ -105,13 +113,15 @@ const merge = ({
       ? 'Save'
       : 'Submit',
     value: discriminator,
-    persist: (val) =>
-      ctx.$chassis.repos.merge(
-        mdl,
-        Object.assign({
-          client
-        }, val)
-      ),
+    persist: async (val) => {
+      alert(JSON.stringify(val))
+      // ctx.$chassis.repos.merge(
+      //   mdl,
+      //   Object.assign({
+      //     client
+      //   }, val)
+      // )
+    }
   })
 
 export { mdl, merge, Discriminator }
