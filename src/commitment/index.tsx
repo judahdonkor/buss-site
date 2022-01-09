@@ -6,7 +6,7 @@ import { Input, Level, openForm } from '~/components'
 
 const mdl = 'org.judahdonkor.buss.Commitment'
 
-const db = ['Acounting','Sales','Inventory','HR & Payroll','Finance']
+const db = ['Acounting', 'Sales', 'Inventory', 'HR & Payroll', 'Finance']
 const monthOptions = [3, 6, 9, 12]
 const Discriminator = tsx
   .componentFactoryOf<{ onInput: (country: Entity) => void }>()
@@ -18,11 +18,7 @@ const Discriminator = tsx
       },
 
     },
-    data() {
-      return {
-        inputValue: ""
-      }
-    },
+
     render() {
       return (
         <div>
@@ -42,27 +38,43 @@ const Discriminator = tsx
                   />
                 </figure> */}
             </Level>
-            <b-field label="Select Database" class="p-4">
-              <b-select placeholder="Select a Database">
-                {
-                  db.map(item => <option value={item} onChange={(e) => e.target.value}>{item}</option>)
-                }
-              </b-select>
+            <b-field label ="Select Database">
+            <b-select
+              placeholder="Select Database"
+              rules='required'
+              value={this.value.discriminator}
+              onInput={(val: String) => this.$emit('input', assoc("discriminator", Number(val), this.value))}
+            >
+              {
+                db.map(data =>
+                (<option
+                  value={data}
+                >{data}</option>))
+              }
+            </b-select>
             </b-field>
-            <b-field label="Select Period" class="p-4">
-              <b-select placeholder="Select a month">
-                {
-                  monthOptions.map(item => (<option value={item} onChange={(e) => e.target.value}>{item === 0 ? 3 : item}</option>))
-                }
-              </b-select>
+            <b-field label="Select Period">
+            <b-select
+              placeholder="Select Period"
+              rules='required'
+              value={this.value.periodInMonth}
+              onInput={(val: String) => this.$emit('input', assoc("periodInMonth", Number(val), this.value))}
+            >
+              {
+                monthOptions.map(mon =>
+                (<option
+                  value={mon}
+                >{mon}</option>))
+              }
+            </b-select>
             </b-field>
-            <b-field label="Enter Amount" class="p-4" style={{ width: "300px" }}>
+            {/* <b-field label="Enter Amount" class="p-4" style={{ width: "300px" }}>
               <b-input
                 type='number'
                 value={this.inputValue}
                 onInput={(val: number) => this.$emit('input', val)}
               ></b-input>
-            </b-field>
+            </b-field> */}
             <Input
               label="Enter Amount"
               cleaveOptions={{

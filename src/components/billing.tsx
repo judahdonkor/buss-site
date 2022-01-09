@@ -1,6 +1,6 @@
 import * as tsx from 'vue-tsx-support'
 import { merge } from '@/commitment'
-import { required } from 'vee-validate/dist/rules'
+
 
 
 

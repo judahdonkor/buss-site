@@ -44,13 +44,23 @@ export default tsx.componentFactory
           </section>
           <section class="section has-default-padding-top">
             <Card class="has-table">
-              <b-switch
+              {/* <b-switch
                 type="is-primary"
                 value={this.active}
                 onInput={(val: boolean) => (this.active = val)}
               >
                 Active
-              </b-switch>
+              </b-switch> */}
+              <div class="control is-flex  p-3 pb-5">
+                <b-radio-button 
+                type 
+                >
+                  Current
+                </b-radio-button>
+                <b-radio-button name="outstanding" native-value="outstanding" class="is-medium">
+                  Pending
+                </b-radio-button>
+              </div>
               <DataTable
                 paginated
                 mdl={mdl}
@@ -79,6 +89,28 @@ export default tsx.componentFactory
                       moment(row.createdAt).format('ll'),
                   }}
                 />
+                <b-table-column
+                  label="Database"
+                  scopedSlots={{
+                    default: ({ row }: DataTableColumnProps) => row.descriminator,
+                  }}
+                />
+                <b-table-column
+                  label="Period of Month"
+                  numeric
+                  scopedSlots={{
+                    default: ({ row }: DataTableColumnProps) => row.periodInMonth,
+                  }}
+                />
+                <b-table-column
+                  label="Amount"
+                  numeric
+                  scopedSlots={{
+                    default: ({ row }: DataTableColumnProps) => row.amount,
+                  }}
+                />
+
+
                 {/* <b-table-column
                   numeric
                   scopedSlots={{

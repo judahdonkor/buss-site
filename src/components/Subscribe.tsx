@@ -78,8 +78,6 @@ const SubscribeView = tsx.component({
  export const Subscribe = tsx.component({
     render(){
         return(<div>
-           
-          
                <SubscribeView 
                title ="Subscribe to our newsletters"
                subtitle =' Get notified when we release new solutions or we have exciting news for you.'
