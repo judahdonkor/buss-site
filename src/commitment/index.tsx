@@ -118,13 +118,13 @@ const merge = ({
       : 'Submit',
     value: commitment,
     persist: async (val) => {
-      alert(JSON.stringify(val))
-      // ctx.$chassis.repos.merge(
-      //   mdl,
-      //   Object.assign({
-      //     client
-      //   }, val)
-      // )
+      // alert(JSON.stringify(val))
+      return ctx.$chassis.repos.merge(
+        mdl,
+        Object.assign({
+          client
+        }, val)
+      )
     }
   })
 
