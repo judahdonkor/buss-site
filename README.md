@@ -1,20 +1,7 @@
-# buss-site-nuxt
+# Website and documentation of [Buss](https://buss.solutions/)
 
-## Build Setup
+This is the product website which handles the following:
 
-```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+- Onboarding
+- Documentation
+- Product features
